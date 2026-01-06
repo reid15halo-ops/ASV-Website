@@ -12,3 +12,7 @@ RewriteRule ^(.*)$ "http://he-12842650.dummy/404" [R=301,L]
 # END ANSIBLE MANAGED BLOCK
 AddHandler application/x-httpd-alt-php83___lsphp .php
 DirectoryIndex index.html index.htm index.shtml index.php index.php5 index.wml index.xml
+
+# Force UTF-8 encoding for HTML files
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .htm .css .js
