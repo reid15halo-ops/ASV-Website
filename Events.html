@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Termine und Veranstaltungen des ASV Petri Heil Großostheim - Fischessen, Arbeitseinsätze, Jugendaktivitäten und mehr.">
+    <title>Termine | ASV Petri Heil Großostheim</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="icon" type="image/png" href="Logo/Verein/Logo Aktive Allgemeiner Verein.png">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-ripple">
+                <div></div>
+                <div></div>
+            </div>
+            <span class="loader-text">Petri Heil...</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <img src="Logo/Verein/Logo Aktive Allgemeiner Verein.png" alt="ASV Petri Heil Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">ASV Petri Heil</span>
+                    <span class="logo-subtitle">Großostheim</span>
+                </div>
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Start</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="verein.html" class="nav-link">Verein <span class="dropdown-arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="verein.html">Über uns</a></li>
+                            <li><a href="vorstandschaft.html">Vorstandschaft</a></li>
+                            <li><a href="geschichte.html">Geschichte</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="gewaesser.html" class="nav-link">Gewässer <span class="dropdown-arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gewaesser.html">Vereinssee</a></li>
+                            <li><a href="fischbestand.html">Fischbestand</a></li>
+                            <li><a href="regeln.html">Regeln & Preise</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="jugend.html" class="nav-link">Jugend</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="termine.html" class="nav-link active">Termine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kontakt.html" class="nav-link">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <a href="downloads.html" class="nav-cta">Downloads</a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="page-hero-tag">Kalender</span>
+                <h1 class="page-hero-title">Termine & Events</h1>
+                <p class="page-hero-description">
+                    Alle wichtigen Termine, Veranstaltungen und Aktivitäten unseres Vereins
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="container">
+
+            <!-- Upcoming Highlights -->
+            <section class="content-section">
+                <h2 class="section-title-center">Anstehende Highlights</h2>
+
+                <div class="events-highlights">
+                    <!-- Highlight Event 1 -->
+                    <div class="event-highlight-card">
+                        <div class="event-date-badge">
+                            <span class="event-day">18</span>
+                            <span class="event-month">Apr</span>
+                        </div>
+                        <div class="event-highlight-content">
+                            <span class="event-type">Tradition</span>
+                            <h3>Fischessen am Karfreitag</h3>
+                            <p>Unser legendäres jährliches Fischessen mit frischem Fisch aus unserem See. Für Mitglieder
+                                und Gäste!</p>
+                            <div class="event-details">
+                                <span class="event-detail"><span class="event-icon">📍</span> Vereinsheim</span>
+                                <span class="event-detail"><span class="event-icon">🕐</span> Ab 11:00 Uhr</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Highlight Event 2 -->
+                    <div class="event-highlight-card">
+                        <div class="event-date-badge">
+                            <span class="event-day">Jul</span>
+                            <span class="event-month">2025</span>
+                        </div>
+                        <div class="event-highlight-content">
+                            <span class="event-type">Jugend</span>
+                            <h3>Zeltlager am See</h3>
+                            <p>Eine Woche Abenteuer für unsere Jugendlichen: Zelten, Angeln, Lagerfeuer und
+                                unvergessliche Erlebnisse.</p>
+                            <div class="event-details">
+                                <span class="event-detail"><span class="event-icon">📍</span> Vereinsgelände</span>
+                                <span class="event-detail"><span class="event-icon">👦</span> Für
+                                    Jugendmitglieder</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Highlight Event 3 -->
+                    <div class="event-highlight-card">
+                        <div class="event-date-badge">
+                            <span class="event-day">Nov</span>
+                            <span class="event-month">2025</span>
+                        </div>
+                        <div class="event-highlight-content">
+                            <span class="event-type">Feier</span>
+                            <h3>Anglerkönigsfeier</h3>
+                            <p>Ehrung unserer erfolgreichsten Angler des Jahres mit Preisverleihung und gemütlichem
+                                Beisammensein.</p>
+                            <div class="event-details">
+                                <span class="event-detail"><span class="event-icon">📍</span> Vereinsheim</span>
+                                <span class="event-detail"><span class="event-icon">🏆</span> Alle Mitglieder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Google Calendar Integration -->
+            <section class="content-section">
+                <div class="calendar-section">
+                    <div class="calendar-header">
+                        <div class="calendar-header-content">
+                            <span class="section-tag">Live Kalender</span>
+                            <h2>Vereinskalender</h2>
+                            <p>Alle Termine auf einen Blick. Der Kalender wird automatisch aktualisiert.</p>
+                        </div>
+                        <div class="calendar-actions">
+                            <a href="https://calendar.google.com/calendar/embed?src=1ccfad68a0dff3c20173ba00986bc6d4327b8ddb71011dd1e93238aab311c9dc%40group.calendar.google.com&ctz=Europe%2FBerlin"
+                                target="_blank" class="btn btn-outline">
+                                <span>In Google Kalender öffnen</span>
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="calendar-embed-wrapper">
+                        <!-- 
+                            ANLEITUNG ZUR GOOGLE KALENDER INTEGRATION:
+                            1. Gehen Sie zu calendar.google.com
+                            2. Erstellen Sie einen neuen Kalender oder verwenden Sie einen bestehenden
+                            3. Klicken Sie auf das Zahnrad-Symbol → Einstellungen
+                            4. Wählen Sie Ihren Kalender links aus
+                            5. Scrollen Sie zu "Kalender integrieren"
+                            6. Kopieren Sie den "Einbettungscode" oder die "Öffentliche URL"
+                            7. Ersetzen Sie den iframe src unten mit Ihrer Kalender-URL
+                            
+                            Die URL sollte so aussehen:
+                            https://calendar.google.com/calendar/embed?src=IHRE_KALENDER_ID@group.calendar.google.com
+                        -->
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FBerlin&bgcolor=%230a0c10&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&src=1ccfad68a0dff3c20173ba00986bc6d4327b8ddb71011dd1e93238aab311c9dc%40group.calendar.google.com&color=%23039BE5"
+                            class="calendar-iframe" frameborder="0" scrolling="no"
+                            title="ASV Petri Heil Vereinskalender">
+                        </iframe>
+
+                        <!-- Fallback wenn kein Kalender eingebettet -->
+                        <div class="calendar-placeholder">
+                            <div class="calendar-placeholder-icon">📅</div>
+                            <h3>Google Kalender Integration</h3>
+                            <p>
+                                Hier wird der Vereinskalender angezeigt, sobald die Kalender-ID konfiguriert ist.
+                                <br>Kontaktieren Sie die Vorstandschaft für aktuelle Termine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Regular Events -->
+            <section class="content-section">
+                <h2 class="section-title-center">Regelmäßige Termine</h2>
+
+                <div class="regular-events-grid">
+                    <div class="regular-event-card">
+                        <div class="regular-event-icon">🎣</div>
+                        <h3>Gemeinschaftsangeln</h3>
+                        <p class="regular-event-schedule">Jeden 2. Samstag im Monat</p>
+                        <p>Gemeinsames Angeln am Vereinssee mit anschließendem Austausch.</p>
+                    </div>
+
+                    <div class="regular-event-card">
+                        <div class="regular-event-icon">🃏</div>
+                        <h3>Schafkopfrunde</h3>
+                        <p class="regular-event-schedule">Jeden Freitag, ab 19:00 Uhr</p>
+                        <p>Gemütliche Kartenrunde im Vereinsheim für alle Interessierten.</p>
+                    </div>
+
+                    <div class="regular-event-card">
+                        <div class="regular-event-icon">👦</div>
+                        <h3>Jugendausbildung</h3>
+                        <p class="regular-event-schedule">Nach Vereinbarung</p>
+                        <p>Praktische Angelausbildung und Vorbereitung zur Fischerprüfung.</p>
+                    </div>
+
+                    <div class="regular-event-card">
+                        <div class="regular-event-icon">🛠️</div>
+                        <h3>Arbeitseinsätze</h3>
+                        <p class="regular-event-schedule">Frühjahr & Herbst</p>
+                        <p>Gemeinsame Pflege des Vereinsgeländes und Gewässers.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calendar Subscribe -->
+            <section class="content-section">
+                <div class="calendar-subscribe-box">
+                    <div class="calendar-subscribe-icon">🔔</div>
+                    <div class="calendar-subscribe-content">
+                        <h3>Keine Termine verpassen!</h3>
+                        <p>
+                            Abonnieren Sie unseren Kalender, um alle Vereinstermine automatisch
+                            in Ihrem persönlichen Kalender zu haben.
+                        </p>
+                        <div class="subscribe-actions">
+                            <a href="#" class="btn btn-primary">
+                                <span>Kalender abonnieren</span>
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                                </svg>
+                            </a>
+                            <a href="kontakt.html" class="btn btn-outline">Kontakt aufnehmen</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="Logo/Verein/Logo Aktive Allgemeiner Verein.png" alt="ASV Petri Heil Logo">
+                        <div class="footer-logo-text">
+                            <span class="footer-logo-title">ASV Petri Heil</span>
+                            <span class="footer-logo-subtitle">Großostheim</span>
+                        </div>
+                    </a>
+                    <p class="footer-description">
+                        Angelsportverein "Petri Heil" Großostheim - Ihr Verein für Angelsport,
+                        Naturerlebnis und Gemeinschaft seit 1966.
+                    </p>
+                </div>
+
+                <div class="footer-nav">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="verein.html">Verein</a></li>
+                        <li><a href="gewaesser.html">Gewässer</a></li>
+                        <li><a href="jugend.html">Jugend</a></li>
+                        <li><a href="termine.html">Termine</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav">
+                    <h4 class="footer-heading">Rechtliches</h4>
+                    <ul class="footer-links">
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Kontakt</h4>
+                    <address class="footer-address">
+                        <p>ASV Petri Heil Großostheim</p>
+                        <p>Grabenstraße 7</p>
+                        <p>63762 Großostheim</p>
+                        <p><a href="tel:+4917770408057">0177 7040857</a></p>
+                        <p><a href="mailto:asv-petriheil@web.de">asv-petriheil@web.de</a></p>
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 ASV Petri Heil Großostheim. Alle Rechte vorbehalten.
+                </p>
+                <p class="footer-made">
+                    Mit 💙 für den Angelsport
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender 📅 | ASV Jugend Großostheim</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/jugend.css">
+    <link rel="icon" type="image/png" href="Logo/Jugend/Verein Logo Jugend .png">
+
+    <style>
+        /* EMBEDDED CALENDAR STYLES TO ENSURE GRID LAYOUT */
+        .jugend-calendar-section {
+            padding: 6rem 0;
+            min-height: 80vh;
+        }
+
+        .calendar-wrapper {
+            background: rgba(16, 24, 40, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .calendar-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn-cal-nav {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-cal-nav:hover {
+            background: var(--jugend-primary);
+            color: black;
+            transform: scale(1.1);
+        }
+
+        #calendar-month-year {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        /* FORCE GRID LAYOUT */
+        .calendar-matrix-header {
+            display: grid !important;
+            grid-template-columns: repeat(7, 1fr) !important;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--jugend-primary);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .calendar-matrix {
+            display: grid !important;
+            grid-template-columns: repeat(7, 1fr) !important;
+            gap: 8px;
+        }
+
+        .calendar-day {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            min-height: 120px;
+            padding: 0.8rem;
+            position: relative;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .calendar-day:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .calendar-day.today {
+            background: rgba(0, 255, 148, 0.1);
+            border-color: var(--jugend-primary);
+        }
+
+        .calendar-day.has-events {
+            cursor: pointer;
+        }
+
+        .calendar-day.has-events:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .day-number {
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .today .day-number {
+            color: var(--jugend-primary);
+        }
+
+        .day-event {
+            background: var(--jugend-primary);
+            color: black;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 600;
+        }
+
+        .calendar-export {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* ===================================
+           MODAL STYLES (REQUIRED FOR DETAILS)
+           =================================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: #1e1e2f;
+            padding: 2rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transform: translateY(20px);
+            transition: transform 0.3s;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .modal-event-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-event-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .modal-time {
+            color: var(--jugend-primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .modal-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-location,
+        .modal-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 0.25rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .calendar-matrix-header {
+                font-size: 0.7rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .calendar-day {
+                min-height: 60px;
+                /* Smaller height */
+                padding: 4px;
+                border-radius: 8px;
+            }
+
+            .day-number {
+                font-size: 0.7rem;
+                margin-bottom: 2px;
+            }
+
+            /* Event dots instead of text on very small screens */
+            .day-event {
+                font-size: 0;
+                width: 6px;
+                height: 6px;
+                padding: 0;
+                border-radius: 50%;
+                margin: 2px auto;
+                background: var(--jugend-primary);
+                display: inline-block;
+            }
+
+            .day-events-list {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 2px;
+            }
+
+            .calendar-wrapper {
+                padding: 1rem;
+            }
+
+            #calendar-month-year {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="jugend-page">
+
+    <!-- Header/Nav (Same as other pages) -->
+    <header class="header jugend-header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <img src="Logo/Jugend/Verein Logo Jugend .png" alt="ASV Petri Heil Jugend Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">ASV Jugend</span>
+                    <span class="logo-subtitle">Großostheim</span>
+                </div>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Start 🏠</a></li>
+                    <li class="nav-item"><a href="aktivitaeten.html" class="nav-link">Aktivitäten 🎯</a></li>
+                    <li class="nav-item"><a href="kalender.html" class="nav-link active">Kalender 📅</a></li>
+                    <li class="nav-item"><a href="eltern.html" class="nav-link">Für Eltern 👪</a></li>
+                    <li class="nav-item"><a href="mitmachen.html" class="nav-link">Mitmachen 🚀</a></li>
+                    <li class="nav-item"><a href="kontakt.html" class="nav-link">Kontakt 📬</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="mitmachen.html" class="nav-cta jugend-cta">Jetzt mitmachen! 🚀</a>
+                <button class="nav-toggle" id="nav-toggle"><span class="hamburger"></span></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero-jugend">
+        <div class="page-hero-bg">
+            <div class="jugend-blob jugend-blob-1"></div>
+        </div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="page-hero-emoji">📅</span>
+                <h1 class="page-hero-title">Unser <span class="jugend-gradient-text">Kalender</span></h1>
+                <p class="page-hero-subtitle">Alle Termine auf einen Blick. Verpasse kein Abenteuer!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="jugend-calendar-section">
+        <div class="container">
+            <div class="calendar-wrapper">
+                <div class="calendar-controls">
+                    <button id="cal-prev" class="btn-cal-nav">⬅️</button>
+                    <h2 id="calendar-month-year">Lade Kalender...</h2>
+                    <button id="cal-next" class="btn-cal-nav">➡️</button>
+                </div>
+
+                <div class="calendar-matrix-header">
+                    <div>Mo</div>
+                    <div>Di</div>
+                    <div>Mi</div>
+                    <div>Do</div>
+                    <div>Fr</div>
+                    <div>Sa</div>
+                    <div>So</div>
+                </div>
+
+                <div id="calendar-grid" class="calendar-matrix">
+                    <!-- Javascript populates this -->
+                    <div class="loader-spinner">🌀</div>
+                </div>
+            </div>
+
+            <div class="calendar-export">
+                <a href="calendar-proxy.php" download="asv-events.ics" class="btn-jugend btn-jugend-secondary">
+                    📅 Kalender abonnieren (ICS)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer jugend-footer">
+        <div class="container">
+            <div class="jugend-footer-content">
+                <div class="footer-logo-section">
+                    <a href="index.html" class="footer-logo">
+                        <img src="Logo/Jugend/Verein Logo Jugend .png" alt="ASV Petri Heil Jugend Logo">
+                    </a>
+                    <p>ASV Petri Heil Jugend Großostheim</p>
+                </div>
+                <div class="footer-links-section">
+                    <a href="aktivitaeten.html">Aktivitäten</a>
+                    <a href="kalender.html">Kalender</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+            </div>
+            <div class="jugend-footer-bottom">
+                <p>© 2024 ASV Petri Heil Großostheim • Made with 💚 für die Jugend</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+
+</html>

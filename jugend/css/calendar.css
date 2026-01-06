@@ -1,0 +1,348 @@
+/* ===================================
+   CALENDAR STYLES
+   =================================== */
+.jugend-calendar-section {
+    padding: 6rem 0;
+    min-height: 80vh;
+}
+
+.calendar-wrapper {
+    background: rgba(16, 24, 40, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.btn-cal-nav {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cal-nav:hover {
+    background: var(--jugend-primary);
+    color: black;
+    transform: scale(1.1);
+}
+
+#calendar-month-year {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.calendar-matrix-header {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--jugend-primary);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.calendar-matrix {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 8px;
+}
+
+.calendar-day {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    min-height: 120px;
+    padding: 0.8rem;
+    position: relative;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.calendar-day:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.calendar-day.today {
+    background: rgba(0, 255, 148, 0.1);
+    border-color: var(--jugend-primary);
+}
+
+.calendar-day.has-events {
+    cursor: pointer;
+}
+
+.calendar-day.has-events:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.day-number {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.today .day-number {
+    color: var(--jugend-primary);
+}
+
+.day-event {
+    background: var(--jugend-primary);
+    color: black;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+}
+
+.calendar-export {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* ===================================
+   UPCOMING WIDGET STYLES
+   =================================== */
+.jugend-events-preview {
+    padding: 6rem 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.events-grid-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.event-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--jugend-primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.event-date-badge {
+    background: linear-gradient(135deg, #00ff94 0%, #00b8ff 100%);
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0, 255, 148, 0.3);
+}
+
+.event-day {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.event-month {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.event-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.event-meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    gap: 0.25rem;
+}
+
+.events-more-link {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-link {
+    color: var(--jugend-primary);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.btn-link:hover {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.no-events,
+.error-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* ===================================
+   MODAL STYLES
+   =================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background: #1e1e2f;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-event-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-event-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.modal-time {
+    color: var(--jugend-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.modal-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.modal-location,
+.modal-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.25rem;
+}
+
+/* Loader */
+.loader-spinner {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+    animation: rotate 2s linear infinite;
+    grid-column: 1 / -1;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile Calendar */
+@media (max-width: 768px) {
+    .calendar-matrix-header {
+        font-size: 0.7rem;
+    }
+
+    .calendar-day {
+        min-height: 80px;
+        padding: 0.25rem;
+    }
+
+    .day-number {
+        font-size: 0.8rem;
+    }
+
+    .day-event {
+        font-size: 0.6rem;
+        padding: 1px 4px;
+    }
+
+    .calendar-wrapper {
+        padding: 1rem;
+    }
+}
