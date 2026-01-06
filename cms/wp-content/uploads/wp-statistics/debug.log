@@ -1,0 +1,297 @@
+
+2020-12-13 08:10:19 :: Duplicate entry '2020-12-14' for key 'unique_date'
+2020-12-18 08:02:50 :: Duplicate entry '2020-12-19' for key 'unique_date'
+2020-12-20 08:38:33 :: Duplicate entry '2020-12-21' for key 'unique_date'
+2020-12-22 07:59:29 :: Duplicate entry '2020-12-23' for key 'unique_date'
+2021-08-19 02:52:10: The address 103.158.95.96 is not in the database.
+2021-08-19 02:53:27: The address 103.158.95.96 is not in the database.
+2021-08-19 02:54:46: The address 103.158.95.96 is not in the database.
+2021-08-19 02:55:18: The address 103.158.95.96 is not in the database.
+2021-08-19 02:55:57: The address 103.158.95.96 is not in the database.
+2021-08-19 02:56:42: The address 103.158.95.96 is not in the database.
+2021-08-19 02:57:54: The address 103.158.95.96 is not in the database.
+2021-10-08 12:10:20: The address 103.153.76.123 is not in the database.
+2021-10-08 12:10:21: The address 103.153.76.123 is not in the database.
+2021-10-26 07:35:34: The address 2606:54c0:1e40:b0::47:23c is not in the database.
+2021-10-26 07:37:35: The address 2606:54c0:1e40:b0::47:23c is not in the database.
+2021-10-26 07:37:36: The address 2606:54c0:1e40:b0::47:23c is not in the database.
+2021-10-26 07:37:36: The address 2606:54c0:1e40:b0::47:23c is not in the database.
+2021-10-26 07:37:36: The address 2606:54c0:1e40:b0::47:23c is not in the database.
+2022-01-27 01:09:37: The address 154.71.98.235 is not in the database.
+2022-01-27 01:09:40: The address 154.71.98.235 is not in the database.
+2022-01-27 01:09:40: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:13: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:15: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:25: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:27: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:27: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:31: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:33: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:34: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:42: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:43: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:48: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:51: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:55: The address 154.71.98.235 is not in the database.
+2022-01-27 01:18:56: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:00: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:01: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:15: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:16: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:22: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:24: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:33: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:35: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:40: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:42: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:48: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:49: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:54: The address 154.71.98.235 is not in the database.
+2022-01-27 01:19:56: The address 154.71.98.235 is not in the database.
+2022-01-27 01:20:10: The address 154.71.98.235 is not in the database.
+2022-01-27 01:20:11: The address 154.71.98.235 is not in the database.
+2022-01-27 01:20:32: The address 154.71.98.235 is not in the database.
+2022-01-27 01:20:34: The address 154.71.98.235 is not in the database.
+2022-01-27 01:20:49: The address 154.71.98.235 is not in the database.
+2022-01-27 01:20:51: The address 154.71.98.235 is not in the database.
+2022-01-27 01:20:59: The address 154.71.98.235 is not in the database.
+2022-01-27 01:21:01: The address 154.71.98.235 is not in the database.
+2022-01-27 01:21:05: The address 154.71.98.235 is not in the database.
+2022-01-27 01:21:06: The address 154.71.98.235 is not in the database.
+2022-01-27 01:21:18: The address 154.71.98.235 is not in the database.
+2022-01-27 01:21:19: The address 154.71.98.235 is not in the database.
+2022-01-27 01:21:23: The address 154.71.98.235 is not in the database.
+2022-01-27 01:21:24: The address 154.71.98.235 is not in the database.
+2022-01-27 01:21:39: The address 154.71.98.235 is not in the database.
+2022-01-27 01:21:42: The address 154.71.98.235 is not in the database.
+2022-02-12 06:08:08: The address 185.202.113.54 is not in the database.
+2022-02-12 06:08:09: The address 185.202.113.54 is not in the database.
+2022-02-12 06:08:16: The address 185.202.113.54 is not in the database.
+2022-02-12 06:08:17: The address 185.202.113.54 is not in the database.
+2022-02-12 06:08:19: The address 185.202.113.54 is not in the database.
+2022-02-15 06:57:10: The address 45.41.12.43 is not in the database.
+2022-02-21 12:04:13: The address 103.149.27.180 is not in the database.
+2022-03-12 04:44:35: The address 2606:54c0:1e40:b0::47:4fc is not in the database.
+2022-03-12 04:44:37: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:44:38: The address 2606:54c0:1e40:b0::47:4fc is not in the database.
+2022-03-12 04:44:38: The address 2606:54c0:1e40:b0::47:4fc is not in the database.
+2022-03-12 04:45:13: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:15: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:15: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:15: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:22: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:23: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:24: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:24: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:29: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:44: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:46: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-03-12 04:45:46: The address 2a02:26f7:ec50:6606:0:4805:59e:837f is not in the database.
+2022-04-05 08:20:44: The address 103.165.85.163 is not in the database.
+2022-04-11 08:42:33: The address 102.222.223.61 is not in the database.
+2022-04-15 07:27:39: The address 2606:54c0:1e20:b0::47:588 is not in the database.
+2022-04-15 07:27:41: The address 2606:54c0:1e20:b0::47:588 is not in the database.
+2022-04-15 07:27:41: The address 2606:54c0:1e20:b0::47:588 is not in the database.
+2022-04-15 07:28:14: The address 2606:54c0:1e20:b0::47:588 is not in the database.
+2022-04-15 07:28:16: The address 2606:54c0:1e20:b0::47:588 is not in the database.
+2022-04-15 07:28:26: The address 2606:54c0:1e20:b0::47:588 is not in the database.
+2022-04-15 07:28:28: The address 2606:54c0:1e20:b0::47:588 is not in the database.
+2022-04-24 07:20:44: The address 80.71.154.73 is not in the database.
+2022-05-06 06:49:58: The address 103.152.17.9 is not in the database.
+2022-05-06 06:50:00: The address 103.152.17.9 is not in the database.
+2022-05-08 02:47:55: The address 80.71.154.205 is not in the database.
+2022-05-16 07:33:26: The address 103.152.17.15 is not in the database.
+2022-05-16 07:33:29: The address 103.152.17.15 is not in the database.
+2022-05-20 09:14:04: The address 103.152.17.15 is not in the database.
+2022-05-20 09:14:06: The address 103.152.17.15 is not in the database.
+2022-05-28 03:31:01: The address 103.152.17.15 is not in the database.
+2022-05-28 03:31:04: The address 103.152.17.15 is not in the database.
+2022-05-29 10:52:39: The address 103.152.17.15 is not in the database.
+2022-05-29 10:52:42: The address 103.152.17.15 is not in the database.
+2022-06-05 01:15:03: The address 103.152.17.15 is not in the database.
+2022-06-05 01:15:06: The address 103.152.17.15 is not in the database.
+2022-06-12 06:20:24: Unknown column 'device' in 'field list'
+2022-06-12 06:21:15: Unknown column 'device' in 'field list'
+2022-06-12 06:21:47: Unknown column 'device' in 'field list'
+2022-06-12 02:25:26: Unknown column 'device' in 'field list'
+2022-06-12 02:26:02: Unknown column 'device' in 'field list'
+2022-06-12 02:26:32: Unknown column 'device' in 'field list'
+2022-06-12 03:10:13: Unknown column 'device' in 'field list'
+2022-06-12 03:10:49: Unknown column 'device' in 'field list'
+2022-06-12 03:11:28: Unknown column 'device' in 'field list'
+2022-06-12 03:14:05: Unknown column 'device' in 'field list'
+2022-06-12 03:14:47: Unknown column 'device' in 'field list'
+2022-06-12 03:15:32: Unknown column 'device' in 'field list'
+2022-06-12 03:17:05: Unknown column 'device' in 'field list'
+2022-06-12 03:17:07: Unknown column 'device' in 'field list'
+2022-06-12 08:33:06: Unknown column 'device' in 'field list'
+2022-06-12 09:42:06: Unknown column 'device' in 'field list'
+2022-06-12 11:44:34: Unknown column 'device' in 'field list'
+2022-06-12 11:44:36: Unknown column 'device' in 'field list'
+2022-06-12 11:44:38: Unknown column 'device' in 'field list'
+2022-06-12 11:44:39: Unknown column 'device' in 'field list'
+2022-06-12 11:44:41: Unknown column 'device' in 'field list'
+2022-06-12 11:44:43: Unknown column 'device' in 'field list'
+2022-06-13 04:54:16: Unknown column 'device' in 'field list'
+2022-06-13 04:54:27: Unknown column 'device' in 'field list'
+2022-06-13 07:40:23: Unknown column 'device' in 'field list'
+2022-06-13 07:40:29: Unknown column 'device' in 'field list'
+2022-06-13 07:40:38: Unknown column 'device' in 'field list'
+2022-06-13 09:43:43: Unknown column 'device' in 'field list'
+2022-06-13 09:44:11: Unknown column 'device' in 'field list'
+2022-06-13 12:34:23: Unknown column 'device' in 'field list'
+2022-06-13 12:34:41: Unknown column 'device' in 'field list'
+2022-06-13 12:38:29: Unknown column 'device' in 'field list'
+2022-06-13 12:38:37: Unknown column 'device' in 'field list'
+2022-06-13 12:39:41: Unknown column 'device' in 'field list'
+2022-06-13 02:36:06: Unknown column 'device' in 'field list'
+2022-06-13 02:37:33: Unknown column 'device' in 'field list'
+2022-06-13 02:38:02: Unknown column 'device' in 'field list'
+2022-06-13 02:38:21: Unknown column 'device' in 'field list'
+2022-06-13 02:38:34: Unknown column 'device' in 'field list'
+2022-06-13 02:39:31: Unknown column 'device' in 'field list'
+2022-06-13 02:39:40: Unknown column 'device' in 'field list'
+2022-06-13 02:40:10: Unknown column 'device' in 'field list'
+2022-06-13 02:40:24: Unknown column 'device' in 'field list'
+2022-06-13 02:40:50: Unknown column 'device' in 'field list'
+2022-06-13 02:48:28: Unknown column 'device' in 'field list'
+2022-06-14 06:00:31: Unknown column 'device' in 'field list'
+2022-06-14 06:31:51: Unknown column 'device' in 'field list'
+2022-06-14 06:32:14: Unknown column 'device' in 'field list'
+2022-06-14 06:32:31: Unknown column 'device' in 'field list'
+2022-06-14 06:32:41: Unknown column 'device' in 'field list'
+2022-06-14 06:33:12: Unknown column 'device' in 'field list'
+2022-06-14 06:33:42: Unknown column 'device' in 'field list'
+2022-06-14 06:33:51: Unknown column 'device' in 'field list'
+2022-06-14 06:35:32: Unknown column 'device' in 'field list'
+2022-06-14 07:20:14: Unknown column 'device' in 'field list'
+2022-06-14 07:20:15: Unknown column 'device' in 'field list'
+2022-06-14 07:21:27: Unknown column 'device' in 'field list'
+2022-06-14 07:21:29: Unknown column 'device' in 'field list'
+2022-06-14 07:22:31: Unknown column 'device' in 'field list'
+2022-06-14 07:22:43: Unknown column 'device' in 'field list'
+2022-06-14 10:49:51: Unknown column 'device' in 'field list'
+2022-06-14 10:50:38: Unknown column 'device' in 'field list'
+2022-06-14 10:50:45: Unknown column 'device' in 'field list'
+2022-06-14 10:51:03: Unknown column 'device' in 'field list'
+2022-06-14 03:18:52: Unknown column 'device' in 'field list'
+2022-06-14 03:31:02: Unknown column 'device' in 'field list'
+2022-06-14 03:31:04: Unknown column 'device' in 'field list'
+2022-06-14 03:31:06: Unknown column 'device' in 'field list'
+2022-06-14 03:31:08: Unknown column 'device' in 'field list'
+2022-06-14 03:31:10: Unknown column 'device' in 'field list'
+2022-06-14 03:31:11: Unknown column 'device' in 'field list'
+2022-06-14 05:27:36: Unknown column 'device' in 'field list'
+2022-06-17 09:02:41: The address 163.123.142.197 is not in the database.
+2022-06-25 02:40:18: The address 103.152.17.15 is not in the database.
+2022-06-25 02:40:22: The address 103.152.17.15 is not in the database.
+2022-07-07 04:56:54: The address 23.128.248.40 is not in the database.
+2022-07-07 04:57:02: The address 23.128.248.40 is not in the database.
+2022-07-07 04:57:12: The address 23.128.248.40 is not in the database.
+2022-07-07 04:57:19: The address 23.128.248.40 is not in the database.
+2022-07-07 04:57:25: The address 23.128.248.15 is not in the database.
+2022-07-07 04:57:30: The address 23.128.248.15 is not in the database.
+2022-07-07 04:57:35: The address 23.128.248.15 is not in the database.
+2022-07-07 04:57:40: The address 23.128.248.15 is not in the database.
+2022-07-07 04:57:45: The address 23.128.248.15 is not in the database.
+2022-07-07 04:57:51: The address 23.128.248.15 is not in the database.
+2022-07-07 04:57:57: The address 23.128.248.15 is not in the database.
+2022-07-07 04:58:03: The address 23.128.248.15 is not in the database.
+2022-07-07 04:58:08: The address 23.128.248.15 is not in the database.
+2022-07-07 04:58:57: The address 23.128.248.60 is not in the database.
+2022-07-07 04:59:07: The address 23.128.248.60 is not in the database.
+2022-07-07 05:00:08: The address 23.128.248.15 is not in the database.
+2022-07-07 05:00:32: The address 23.128.248.15 is not in the database.
+2022-07-07 05:00:38: The address 23.128.248.15 is not in the database.
+2022-07-07 05:00:45: The address 23.128.248.15 is not in the database.
+2022-07-07 05:00:52: The address 23.128.248.15 is not in the database.
+2022-07-07 05:00:57: The address 23.128.248.15 is not in the database.
+2022-07-15 05:35:10: The address 103.152.198.246 is not in the database.
+2022-07-22 02:27:49: The address 103.174.203.250 is not in the database.
+2022-07-30 09:47:18: The address 2a02:26f7:ec48:6606:0:15cd:6822:4a08 is not in the database.
+2022-07-30 09:47:20: The address 2a02:26f7:ec48:6606:0:15cd:6822:4a08 is not in the database.
+2022-07-30 09:47:20: The address 2a02:26f7:ec48:6606:0:15cd:6822:4a08 is not in the database.
+2022-08-08 10:02:19: The address 23.154.177.11 is not in the database.
+2022-08-08 10:02:29: The address 23.154.177.11 is not in the database.
+2022-08-19 07:34:49: The address 2606:54c0:1f40:18::41:3a is not in the database.
+2022-08-19 07:34:51: The address 2606:54c0:1f40:18::41:3a is not in the database.
+2022-08-19 07:34:51: The address 2606:54c0:1f40:18::41:3a is not in the database.
+2022-08-19 07:35:30: The address 2606:54c0:1f40:18::41:3a is not in the database.
+2022-08-19 07:35:31: The address 2606:54c0:1f40:18::41:3a is not in the database.
+2022-09-04 04:55:01: The address 103.151.101.195 is not in the database.
+2022-09-04 04:55:11: The address 103.151.101.195 is not in the database.
+2022-09-04 04:55:15: The address 103.151.101.195 is not in the database.
+2022-09-04 04:55:19: The address 103.151.101.195 is not in the database.
+2022-09-04 04:55:24: The address 103.151.101.195 is not in the database.
+2022-09-04 04:55:34: The address 103.151.101.195 is not in the database.
+2022-09-04 04:55:47: The address 103.151.101.195 is not in the database.
+2022-09-07 07:36:53: The address 2606:54c0:1e00:10b0::1d6:e8 is not in the database.
+2022-09-07 07:36:55: The address 2606:54c0:1e00:10b0::1d6:e8 is not in the database.
+2022-09-07 07:36:55: The address 2606:54c0:1e00:10b0::1d6:e8 is not in the database.
+2022-09-07 07:37:51: The address 2606:54c0:1e00:10b0::1d6:e8 is not in the database.
+2022-09-07 07:37:52: The address 2606:54c0:1e00:10b0::1d6:e8 is not in the database.
+2022-09-11 11:59:51: The address 37.140.241.77 is not in the database.
+2022-09-11 11:59:51: The address 37.140.241.77 is not in the database.
+2022-09-11 11:59:52: The address 37.140.241.77 is not in the database.
+2022-09-12 05:23:51: The address 37.140.241.77 is not in the database.
+2022-09-12 05:23:55: The address 37.140.241.77 is not in the database.
+2022-09-25 11:52:52: The address 185.212.114.109 is not in the database.
+2022-10-09 09:21:07: The address 103.170.123.232 is not in the database.
+2022-10-09 09:21:32: The address 103.170.123.232 is not in the database.
+2022-10-09 09:21:34: The address 103.170.123.232 is not in the database.
+2022-10-09 09:21:37: The address 103.170.123.232 is not in the database.
+2022-10-25 09:07:28: The address 37.140.241.77 is not in the database.
+2022-10-25 09:07:32: The address 37.140.241.77 is not in the database.
+2022-10-28 07:10:11: The address 37.140.241.77 is not in the database.
+2022-10-28 07:10:13: The address 37.140.241.77 is not in the database.
+2022-10-30 02:33:03: The address 88.135.68.99 is not in the database.
+2022-10-30 02:33:03: The address 88.135.68.99 is not in the database.
+2022-10-30 02:33:07: The address 88.135.68.99 is not in the database.
+2022-11-08 01:35:36: The address 103.170.123.232 is not in the database.
+2022-11-20 08:11:19: The address 212.23.222.158 is not in the database.
+2022-11-20 08:11:22: The address 212.23.222.158 is not in the database.
+2022-11-20 08:11:22: The address 212.23.222.158 is not in the database.
+2022-11-27 07:58:51: The address 23.128.248.19 is not in the database.
+2022-12-01 01:26:23: The address 23.128.248.14 is not in the database.
+2022-12-01 02:09:04: The address 103.63.24.139 is not in the database.
+2022-12-01 02:09:04: The address 103.63.24.139 is not in the database.
+2022-12-01 02:09:09: The address 103.63.24.139 is not in the database.
+2022-12-01 04:43:55: The address 103.153.3.21 is not in the database.
+2022-12-01 04:43:55: The address 103.153.3.21 is not in the database.
+2022-12-01 04:43:59: The address 103.153.3.21 is not in the database.
+2022-12-01 10:25:05: The address 103.179.191.199 is not in the database.
+2022-12-01 10:25:09: The address 103.179.191.199 is not in the database.
+2022-12-04 12:41:35: The address 103.63.24.139 is not in the database.
+2022-12-04 12:41:41: The address 103.63.24.139 is not in the database.
+2022-12-04 04:05:22: The address 103.161.132.8 is not in the database.
+2022-12-04 04:05:22: The address 103.161.132.8 is not in the database.
+2022-12-04 04:05:27: The address 103.161.132.8 is not in the database.
+2022-12-04 09:42:16: The address 103.63.24.139 is not in the database.
+2022-12-04 09:42:22: The address 103.63.24.139 is not in the database.
+2022-12-06 01:19:40: The address 2606:54c0:1e40:b0::4b:6a is not in the database.
+2022-12-06 01:19:43: The address 2606:54c0:1e40:b0::4b:73 is not in the database.
+2022-12-06 01:19:43: The address 2606:54c0:1e40:b0::4b:73 is not in the database.
+2022-12-10 05:35:11: The address 103.161.132.8 is not in the database.
+2022-12-10 05:35:15: The address 103.161.132.8 is not in the database.
+2022-12-11 05:40:48: The address 103.161.132.8 is not in the database.
+2022-12-11 05:40:52: The address 103.161.132.8 is not in the database.
+2022-12-12 05:15:43: The address 103.153.3.21 is not in the database.
+2022-12-12 05:15:48: The address 103.153.3.21 is not in the database.
+2022-12-12 03:17:21: The address 103.161.132.8 is not in the database.
+2022-12-12 03:17:26: The address 103.161.132.8 is not in the database.
+2022-12-13 10:09:38: The address 103.161.132.8 is not in the database.
+2022-12-13 10:09:43: The address 103.161.132.8 is not in the database.
+2022-12-18 12:15:42: The address 103.161.132.8 is not in the database.
+2022-12-18 12:15:47: The address 103.161.132.8 is not in the database.
+2022-12-18 02:39:41: The address 103.161.132.8 is not in the database.
+2022-12-18 02:39:45: The address 103.161.132.8 is not in the database.
+2022-12-18 08:57:09: The address 103.161.132.8 is not in the database.
+2022-12-18 08:57:13: The address 103.161.132.8 is not in the database.
+2022-12-19 09:06:19: The address 103.161.132.8 is not in the database.
+2022-12-19 09:06:23: The address 103.161.132.8 is not in the database.
+2023-01-02 12:43:51: The address 176.111.173.153 is not in the database.
+2023-01-02 08:01:39: The address 176.111.173.153 is not in the database.
+2023-01-02 08:11:00: The address 176.111.173.153 is not in the database.
+2023-01-07 12:58:26: The address 176.111.173.153 is not in the database.
+2023-01-12 07:45:46: The address 176.111.173.153 is not in the database.
+2023-01-18 03:25:01: The address 176.111.173.153 is not in the database.

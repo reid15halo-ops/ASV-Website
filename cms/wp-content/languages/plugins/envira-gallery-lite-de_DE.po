@@ -1,0 +1,755 @@
+# Translation of Plugins - Gallery Plugin for WordPress &#8211; Envira Photo Gallery - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Gallery Plugin for WordPress &#8211; Envira Photo Gallery - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-12-28 22:40:51+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Gallery Plugin for WordPress &#8211; Envira Photo Gallery - Stable (latest release)\n"
+
+#: includes/admin/metaboxes.php:1681
+msgid "Upgrade To Envira Pro"
+msgstr "Upgrade auf Envira Pro"
+
+#: includes/admin/metaboxes.php:1673
+msgid "Bonus:"
+msgstr "Bonus:"
+
+#: includes/admin/metaboxes.php:1675
+msgid "50% off"
+msgstr "50 % Rabatt"
+
+#: includes/admin/common.php:896
+msgid "Pages"
+msgstr "Seiten"
+
+#: includes/admin/common.php:548
+msgid "Edit Post"
+msgstr "Beitrag bearbeiten"
+
+#: includes/admin/common.php:547
+msgid "Post ID"
+msgstr "Beitrags-ID"
+
+#: includes/admin/partials/metabox-gallery-type.php:129
+msgid "Demo Images"
+msgstr "Demo-Bilder"
+
+#: includes/admin/partials/onboarding-wizard/step-1.php:66
+msgid "Email Address"
+msgstr "E-Mail-Adresse"
+
+#: includes/admin/partials/onboarding-wizard/step-1.php:40
+msgid "Blogger"
+msgstr "Blogger"
+
+#: includes/admin/partials/licensing.php:79
+msgid "License Type"
+msgstr "Lizenz-Typ"
+
+#: includes/admin/partials/onboarding-wizard/step-4.php:87
+msgid "Enter your license key"
+msgstr "Lizenzschlüssel eingeben"
+
+#: includes/global/Envira_Tracking.php:221
+msgid "Once Weekly"
+msgstr "Einmal wöchentlich"
+
+#: includes/admin/settings.php:260
+msgid "The nonce field is invalid."
+msgstr "Das Nonce-Feld ist ungültig."
+
+#: includes/admin/permissions.php:69 includes/admin/settings.php:321
+msgid "Delete Galleries"
+msgstr "Galerien löschen"
+
+#: includes/admin/permissions.php:68 includes/admin/settings.php:312
+msgid "Edit Galleries"
+msgstr "Galerien bearbeiten"
+
+#: includes/admin/permissions.php:67 includes/admin/settings.php:303
+msgid "Create Galleries"
+msgstr "Galerien erstellen"
+
+#: includes/admin/metaboxes.php:1361
+msgid "Animations"
+msgstr "Animationen"
+
+#: includes/admin/welcome.php:307
+msgid "Smash Balloon Facebook Feeds"
+msgstr "Smash Balloon Facebook Feeds"
+
+#: includes/admin/welcome.php:299
+msgid "Smash Balloon Instagram Feeds Pro"
+msgstr "Smash Balloon Instagram Feeds Pro"
+
+#: includes/admin/welcome.php:323
+msgid "Smash Balloon YouTube Feeds"
+msgstr "Smash Balloon YouTube Feeds"
+
+#: includes/admin/welcome.php:315
+msgid "Smash Balloon Facebook Feeds Pro"
+msgstr "Smash Balloon Facebook Feeds Pro"
+
+#: includes/admin/welcome.php:291
+msgid "Smash Balloon Instagram Feeds"
+msgstr "Smash Balloon Instagram Feeds"
+
+#: includes/admin/welcome.php:274
+msgid "RafflePress Pro"
+msgstr "RafflePress Pro"
+
+#: includes/admin/welcome.php:266
+msgid "RafflePress"
+msgstr "RafflePress"
+
+#: includes/admin/welcome.php:250
+msgid "SeedProd"
+msgstr "SeedProd"
+
+#: includes/admin/welcome.php:242
+msgid "AIOSEO Pro"
+msgstr "AIOSEO Pro"
+
+#: includes/admin/welcome.php:258
+msgid "SeedProd Pro"
+msgstr "SeedProd Pro"
+
+#: includes/admin/welcome.php:234
+msgid "AIOSEO"
+msgstr "AIOSEO"
+
+#: includes/admin/welcome.php:226
+msgid "WP Mail SMTP Pro"
+msgstr "WP Mail SMTP Pro"
+
+#: includes/admin/partials/onboarding-wizard/step-3.php:190
+#: includes/admin/welcome.php:218
+msgid "WP Mail SMTP"
+msgstr "WP Mail SMTP"
+
+#: includes/admin/welcome.php:210
+msgid "MonsterInsights Pro"
+msgstr "MonsterInsights Pro"
+
+#: includes/admin/welcome.php:202
+msgid "MonsterInsights"
+msgstr "MonsterInsights"
+
+#: includes/admin/welcome.php:194
+msgid "OptinMonster"
+msgstr "OptinMonster"
+
+#: includes/admin/settings.php:159
+msgid " License Key"
+msgstr " Lizenzschlüssel"
+
+#: includes/admin/settings.php:153
+msgid "License"
+msgstr "Lizenz"
+
+#: includes/admin/settings.php:56 includes/admin/settings.php:57
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/admin/welcome.php:413
+msgid "Sugar Calendar Pro"
+msgstr "Sugar Calendar Pro"
+
+#: includes/admin/welcome.php:405
+msgid "Sugar Calendar"
+msgstr "Sugar Calendar"
+
+#: includes/admin/welcome.php:396
+msgid "Easy Digital Downloads"
+msgstr "Easy Digital Downloads"
+
+#: includes/admin/welcome.php:387
+msgid "WP Simple Pay Pro"
+msgstr "WP Simple Pay Pro"
+
+#: includes/admin/welcome.php:379
+msgid "WP Simple Pay"
+msgstr "WP Simple Pay"
+
+#: includes/admin/welcome.php:371
+msgid "AffiliateWP"
+msgstr "AffiliateWP"
+
+#: includes/admin/welcome.php:347
+msgid "Smash Balloon Twitter Feeds Pro"
+msgstr "Smash Balloon Twitter Feeds Pro"
+
+#: includes/admin/welcome.php:339
+msgid "Smash Balloon Twitter Feeds"
+msgstr "Smash Balloon Twitter Feeds"
+
+#: includes/admin/welcome.php:331
+msgid "Smash Balloon YouTube Feeds Pro"
+msgstr "Smash Balloon YouTube Feeds Pro"
+
+#: includes/admin/welcome.php:355
+msgid "TrustPulse"
+msgstr "TrustPulse"
+
+#: includes/admin/albums.php:59 includes/admin/albums.php:60
+msgid "Albums"
+msgstr "Alben"
+
+#: includes/admin/partials/footer.php:66
+msgid "YouTube"
+msgstr "YouTube"
+
+#: includes/admin/partials/footer.php:58
+msgid "Twitter"
+msgstr "Twitter"
+
+#: includes/admin/partials/footer.php:50
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: includes/admin/partials/footer.php:34
+msgid "Facebook"
+msgstr "Facebook"
+
+#: includes/admin/partials/footer.php:25
+msgid "Free Plugins"
+msgstr "Kostenlose Plugins"
+
+#: includes/admin/editor.php:116 includes/admin/editor.php:118
+msgid "Add Gallery"
+msgstr "Galerie hinzufügen"
+
+#: includes/admin/media-view.php:173 includes/admin/media-view.php:457
+msgid "Helpful Tips"
+msgstr "Hilfreiche Tipps"
+
+#: includes/admin/media-view.php:174
+msgid "Choosing Your Gallery"
+msgstr "Wählen Sie Ihre Galerie"
+
+#: includes/admin/media-view.php:178
+msgid "Inserting Your Gallery"
+msgstr "Ihre Galerie einfügen"
+
+#: includes/admin/metaboxes.php:173
+msgid "Click Here to Insert from Other Image Sources"
+msgstr "Klicken Sie hier, um Bilder aus anderen Quellen einzufügen"
+
+#: includes/admin/metaboxes.php:302
+msgid "You must select a file to import before continuing."
+msgstr "Wählen Sie zuerst eine Datei bevor Sie fortfahren."
+
+#: includes/admin/metaboxes.php:149 includes/admin/metaboxes.php:304
+msgid "Inserting..."
+msgstr "Füge ein..."
+
+#: includes/admin/metaboxes.php:313
+msgid "Are you sure you want to remove this image from the gallery?"
+msgstr "Wollen Sie dieses Bild wirklich aus der Galerie entfernen?"
+
+#: includes/admin/metaboxes.php:439
+msgid "Envira Gallery Settings"
+msgstr "Envira Galerie Einstellungen"
+
+#: includes/admin/metaboxes.php:612
+msgid "Config"
+msgstr "Konfiguration"
+
+#: includes/admin/metaboxes.php:620
+msgid "Misc"
+msgstr "Diverses"
+
+#: includes/admin/media-view.php:120 includes/admin/media-view.php:121
+#: includes/admin/media-view.php:480 includes/admin/media-view.php:481
+#: includes/admin/metaboxes.php:1364
+msgid "Search"
+msgstr "Suchen"
+
+#: includes/admin/metaboxes.php:892
+msgid "Number of Gallery Columns"
+msgstr "Anzahl der Spalten"
+
+#: includes/admin/metaboxes.php:984 includes/admin/table.php:302
+#: includes/admin/table.php:359
+msgid "Gallery Theme"
+msgstr "Galerie-Theme"
+
+#: includes/admin/metaboxes.php:992
+msgid "Sets the theme for the gallery display."
+msgstr "Legt das Theme für die Galerie fest."
+
+#: includes/admin/metaboxes.php:997
+msgid "Column Gutter Width"
+msgstr "Spaltenbundstegbreite"
+
+#: includes/admin/metaboxes.php:1001
+msgid "Sets the space between the columns (defaults to 10)."
+msgstr "Stellt den Abstand zwischen den Spalten (standardmäßig 10) ein."
+
+#: includes/admin/metaboxes.php:1006
+msgid "Margin Below Each Image"
+msgstr "Abstand unter jedem Bild"
+
+#: includes/admin/metaboxes.php:1010
+msgid "Sets the space below each item in the gallery."
+msgstr "Legt den Abstand unter jedem Bild der Galerie fest."
+
+#: includes/admin/metaboxes.php:1156
+msgid "Gallery Lightbox Theme"
+msgstr "Leuchtkasten-Theme"
+
+#: includes/admin/metaboxes.php:1164
+msgid "Sets the theme for the gallery lightbox display."
+msgstr "Legt das Theme für den Leuchtkasten fest."
+
+#: includes/admin/metaboxes.php:1257
+msgid "Gallery Title"
+msgstr "Galerie-Titel"
+
+#: includes/admin/metaboxes.php:1261
+msgid "Internal gallery title for identification in the admin."
+msgstr "Interner Galerie-Titel zur Identifizierung im Admin-Bereich."
+
+#: includes/admin/metaboxes.php:1266
+msgid "Gallery Slug"
+msgstr "Galerie-Slug"
+
+#: includes/admin/metaboxes.php:1273
+msgid "<strong>Unique</strong> internal gallery slug for identification and advanced gallery queries."
+msgstr "<strong>Einzigartiger</strong> interner Galerie-Slug zur Identifizierung und erweiterte Abfragen."
+
+#: includes/admin/metaboxes.php:1282
+msgid "Custom Gallery Classes"
+msgstr "Benutzerdefinierte CSS-Klassen"
+
+#: includes/admin/metaboxes.php:1304
+msgid "Enter custom gallery CSS classes here, one per line."
+msgstr "Geben Sie hier benutzerdefinierte CSS-Klassen für die Galerie ein, jeweils eine pro Zeile."
+
+#: includes/admin/metaboxes.php:1305
+msgid "Adds custom CSS classes to this gallery. Enter one class per line."
+msgstr "Fügt benutzerdefinierte CSS-Klassen für die Galerie ein, jeweils eine pro Zeile."
+
+#: includes/admin/metaboxes.php:1929
+msgid "Remove Image from Gallery?"
+msgstr "Bild aus Galerie entfernen?"
+
+#: includes/admin/metaboxes.php:1930
+msgid "Modify Image"
+msgstr "Bild ändern"
+
+#: includes/admin/media-view.php:240
+msgid "Edit Metadata"
+msgstr "Metadaten editieren"
+
+#: includes/admin/media-view.php:263 includes/admin/media-view.php:349
+msgid "Image titles can take any type of HTML. You can adjust the position of the titles in the main Lightbox settings."
+msgstr "Bildtitel dürfen jede Art von HTML enthalten. Sie können die Position der Titel in den Einstellungen für den Leuchtkasten festlegen."
+
+#: includes/admin/media-view.php:308 includes/admin/media-view.php:309
+#: includes/admin/media-view.php:418
+msgid "Save Metadata"
+msgstr "Metadaten speichern"
+
+#: includes/admin/media-view.php:260 includes/admin/media-view.php:346
+#: includes/admin/table.php:167 includes/global/common.php:221
+#: assets/js/envira-gutenberg.js:2
+msgid "Title"
+msgstr "Titel"
+
+#: includes/admin/table.php:168
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/admin/table.php:170
+msgid "Last Modified"
+msgstr "Zuletzt geändert"
+
+#: includes/admin/table.php:171
+msgid "Date"
+msgstr "Datum"
+
+#: includes/admin/posttype.php:118 includes/admin/posttype.php:121
+msgid "Envira gallery updated."
+msgstr "Envira Galerie wurde aktualisiert."
+
+#: includes/admin/posttype.php:119
+msgid "Envira gallery custom field updated."
+msgstr "Benutzerdefiniertes Feld wurde aktualisiert."
+
+#: includes/admin/posttype.php:120
+msgid "Envira gallery custom field deleted."
+msgstr "Benutzerdefiniertes Feld wurde gelöscht."
+
+#. translators: %s: revision version
+#: includes/admin/posttype.php:123
+msgid "Envira gallery restored to revision from %s."
+msgstr "Galerie wurde auf Version %s zurückgesetzt."
+
+#: includes/admin/posttype.php:124
+msgid "Envira gallery published."
+msgstr "Envira Galerie wurde veröffentlicht."
+
+#: includes/admin/posttype.php:125
+msgid "Envira gallery saved."
+msgstr "Envira Galerie wurde gespeichert."
+
+#: includes/admin/posttype.php:126
+msgid "Envira gallery submitted."
+msgstr "Envira Galerie wurde eingereicht."
+
+#. translators: %s: scheduled date
+#: includes/admin/posttype.php:128
+msgid "Envira gallery scheduled for: <strong>%1$s</strong>."
+msgstr "Galerie geplant für: <strong>%1$s</strong>."
+
+#: includes/admin/posttype.php:129
+msgid "Envira gallery draft updated."
+msgstr "Entwurf wurde aktualisiert."
+
+#: includes/global/common.php:100
+msgid "One Column (1)"
+msgstr "Eine Spalte (1)"
+
+#: includes/global/common.php:104
+msgid "Two Columns (2)"
+msgstr "Zwei Spalten (2)"
+
+#: includes/global/common.php:108
+msgid "Three Columns (3)"
+msgstr "Drei Spalten (3)"
+
+#: includes/global/common.php:112
+msgid "Four Columns (4)"
+msgstr "Vier Spalten (4)"
+
+#: includes/global/common.php:116
+msgid "Five Columns (5)"
+msgstr "Fünf Spalten (5)"
+
+#: includes/global/common.php:120
+msgid "Six Columns (6)"
+msgstr "Sechs Spalten (6)"
+
+#: includes/global/common.php:817
+msgid "No image editor could be selected. Please verify with your webhost that you have either the GD or Imagick image library compiled with your PHP install on your server."
+msgstr "Kein Bildeditor konnte ausgewählt werden. Bitte fragen Sie Ihren Serveranbieter, ob Sie \"GD\" oder die \"Imagick image library\" in Ihrer PHP-Installation auf dem Server haben."
+
+#: includes/global/common.php:920
+msgid "No image URL specified for cropping."
+msgstr "Keine Bild-URL zum Zuschneiden ausgewählt."
+
+#: includes/global/common.php:948 includes/global/common.php:953
+msgid "No file could be found for the image URL specified."
+msgstr "Keine Datei für die angegebene Bild-URL gefunden."
+
+#: includes/global/common.php:961 includes/global/common.php:973
+msgid "The dimensions of the original image could not be retrieved for cropping."
+msgstr "Die Abmessungen des Originalbildes konnten nicht gelesen werden."
+
+#: includes/admin/common.php:430 includes/admin/common.php:825
+#: includes/admin/gutenberg.php:129 includes/admin/metaboxes.php:435
+#: includes/admin/partials/header.php:37 includes/global/posttype.php:73
+#: assets/js/envira-gutenberg.js:2
+msgid "Envira Gallery"
+msgstr "Envira-Galerie"
+
+#. Plugin Name of the plugin
+#: envira-gallery-lite.php
+msgid "Envira Gallery Lite"
+msgstr "Envira-Galerie Lite"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: envira-gallery-lite.php
+msgid "http://enviragallery.com"
+msgstr "http://enviragallery.com"
+
+#: includes/admin/metaboxes.php:961 includes/admin/metaboxes.php:970
+#: includes/admin/metaboxes.php:1000 includes/admin/metaboxes.php:1009
+#: includes/admin/metaboxes.php:1046
+msgid "px"
+msgstr "px"
+
+#: includes/admin/metaboxes.php:1126 assets/js/envira-gutenberg.js:2
+msgid "Enable Lightbox?"
+msgstr "Lightbox aktivieren?"
+
+#: includes/global/common.php:359
+msgid "Float"
+msgstr "Ausrichtung"
+
+#: includes/admin/metaboxes.php:1182
+msgid "Caption Position"
+msgstr "Position der Bildbeschriftung"
+
+#: includes/admin/metaboxes.php:1190
+msgid "Sets the display of the lightbox image's caption."
+msgstr "Definiert die Anzeige der Bildbeschriftung in der Lightbox."
+
+#: includes/global/common.php:363
+msgid "Float (Wrapped)"
+msgstr "Ausrichtung (eingeschlossen)"
+
+#: includes/global/shortcode.php:1114 includes/global/shortcode.php:1836
+msgid "Next"
+msgstr "Nächstes"
+
+#: includes/global/shortcode.php:1113 includes/global/shortcode.php:1846
+msgid "Close"
+msgstr "Schließen"
+
+#: includes/global/shortcode.php:1115 includes/global/shortcode.php:1832
+msgid "Previous"
+msgstr "Zurück"
+
+#: includes/admin/metaboxes.php:1310
+msgid "Enable RTL Support?"
+msgstr "RTL-Unterstützung aktivieren?"
+
+#: includes/admin/metaboxes.php:1316
+msgid "Enables or disables RTL support in Envira for right-to-left languages."
+msgstr "Aktiviert oder deaktiviert die Unterstützung von von RTL Sprachen (rechts-nach-links) in Envira."
+
+#: includes/admin/metaboxes.php:1132
+msgid "Enables or disables the gallery lightbox."
+msgstr "Aktiviert oder deaktiviert die Galerie-Lightbox."
+
+#: includes/global/common.php:659
+msgid "Image Files"
+msgstr "Bilddateien"
+
+#. Description of the plugin
+#: envira-gallery-lite.php
+msgid "Envira Gallery is the best responsive WordPress gallery plugin. This is the Lite version."
+msgstr "Envira Gallery ist das beste responsive WordPress-Galerie-Plugin. Dies ist die Lite-Version."
+
+#: includes/admin/metaboxes.php:613 assets/js/envira-gutenberg.js:2
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: includes/admin/metaboxes.php:318
+msgid "Saving..."
+msgstr "Wird gespeichert …"
+
+#: includes/admin/addons.php:183 includes/admin/addons.php:574
+#: includes/admin/welcome.php:127
+msgid "Install"
+msgstr "Installieren"
+
+#: includes/admin/addons.php:182 includes/admin/welcome.php:126
+msgid "Status: Inactive"
+msgstr "Status: Inaktiv"
+
+#: includes/admin/addons.php:181 includes/admin/Deactivation_Survey.php:263
+#: includes/admin/welcome.php:125
+msgid "Deactivating..."
+msgstr "Wird deaktiviert …"
+
+#: includes/admin/addons.php:179 includes/admin/addons.php:591
+#: includes/admin/welcome.php:123
+msgid "Deactivate"
+msgstr "Deaktivieren"
+
+#: includes/admin/addons.php:177 includes/admin/welcome.php:121
+msgid "Activating..."
+msgstr "Wird aktiviert …"
+
+#: includes/admin/addons.php:175 includes/admin/addons.php:607
+#: includes/admin/common.php:522 includes/admin/welcome.php:119
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: includes/admin/addons.php:174 includes/admin/welcome.php:118
+msgid "Status: Active"
+msgstr "Status: Aktiv"
+
+#: includes/admin/addons.php:185 includes/admin/welcome.php:129
+msgid "Installing..."
+msgstr "Wird installiert …"
+
+#: includes/admin/addons.php:97 includes/admin/addons.php:491
+msgid "Addons"
+msgstr "Add-ons"
+
+#: includes/admin/metaboxes.php:188
+msgid "All images uploaded."
+msgstr "Alle Bilder wurden hochgeladen."
+
+#: includes/admin/media-view.php:283 includes/admin/media-view.php:392
+msgid "Media File"
+msgstr "Mediendatei"
+
+#: includes/admin/media-view.php:279 includes/admin/media-view.php:388
+#: includes/global/common.php:233
+msgid "URL"
+msgstr "URL"
+
+#: includes/admin/media-view.php:190 includes/global/common.php:732
+msgid "No"
+msgstr "Nein"
+
+#. translators: %s: heading size integer
+#: includes/admin/media-view.php:195
+msgid "Yes, as Heading H%s"
+msgstr "Ja, als Überschrift H%s"
+
+#: includes/admin/addons.php:603
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#: includes/admin/addons.php:587
+msgid "Active"
+msgstr "Aktiv"
+
+#: includes/admin/addons.php:570
+msgid "Not Installed"
+msgstr "Nicht installiert"
+
+#: includes/admin/addons.php:570 includes/admin/addons.php:587
+#: includes/admin/addons.php:603
+msgid "Status:"
+msgstr "Status:"
+
+#: includes/admin/addons.php:557
+msgid "Upgrade Now"
+msgstr "Jetzt upgraden"
+
+#: includes/admin/metaboxes.php:1358
+msgid "Videos"
+msgstr "Videos"
+
+#: includes/admin/metaboxes.php:1362
+msgid "Pagination"
+msgstr "Seitennummerierung"
+
+#: includes/admin/metaboxes.php:1138
+msgid "Enable Links?"
+msgstr "Links aktivieren?"
+
+#: includes/admin/metaboxes.php:1052
+msgid "Crop Images?"
+msgstr "Bilder zuschneiden?"
+
+#: includes/admin/metaboxes.php:772
+msgid "Gallery Settings"
+msgstr "Galerie-Einstellungen"
+
+#: includes/admin/metaboxes.php:611 includes/global/posttype.php:63
+#: assets/js/envira-gutenberg.js:2
+msgid "Gallery"
+msgstr "Galerie"
+
+#: includes/admin/metaboxes.php:595 includes/global/common.php:300
+msgid "Default"
+msgstr "Standard"
+
+#: includes/global/common.php:494 includes/global/common.php:517
+msgid "Bottom"
+msgstr "Unten"
+
+#: includes/global/common.php:490 includes/global/common.php:513
+msgid "Top"
+msgstr "Oben"
+
+#: includes/global/common.php:341
+msgid "Original Image"
+msgstr "Originalbild"
+
+#: includes/global/common.php:256
+msgid "Descending (Z-A)"
+msgstr "Absteigend (Z-A)"
+
+#: includes/global/common.php:252
+msgid "Ascending (A-Z)"
+msgstr "Aufsteigend (A-Z)"
+
+#: includes/global/common.php:217
+msgid "Filename"
+msgstr "Dateiname"
+
+#: includes/global/common.php:209 includes/global/common.php:335
+msgid "Random"
+msgstr "Zufällig"
+
+#: includes/admin/metaboxes.php:811 includes/global/common.php:96
+msgid "Automatic"
+msgstr "Automatisch"
+
+#: includes/admin/metaboxes.php:789
+msgid "Gallery Layout"
+msgstr "Galerie-Layout"
+
+#: includes/admin/common.php:895 includes/admin/table.php:169
+msgid "Posts"
+msgstr "Beiträge"
+
+#. translators: %s: image count
+#: includes/admin/table.php:220
+msgid "%d Image"
+msgid_plural "%d Images"
+msgstr[0] "%d Bild"
+msgstr[1] "%d Bilder"
+
+#: includes/admin/review.php:147
+msgid "Nope, maybe later"
+msgstr "Nein, vielleicht später"
+
+#: includes/admin/partials/footer.php:42
+#: includes/admin/partials/metabox-gallery-type.php:56
+msgid "Instagram"
+msgstr "Instagram"
+
+#: includes/global/posttype.php:68
+msgid "View Gallery"
+msgstr "Galerie anzeigen"
+
+#: includes/global/posttype.php:67
+msgid "New Gallery"
+msgstr "Neue Galerie"
+
+#: includes/global/posttype.php:66 assets/js/envira-gutenberg.js:2
+msgid "Edit Gallery"
+msgstr "Galerie bearbeiten"
+
+#: includes/global/posttype.php:65 assets/js/envira-gutenberg.js:2
+msgid "Add New Gallery"
+msgstr "Neue Galerie hinzufügen"
+
+#: includes/global/posttype.php:62
+msgid "Galleries"
+msgstr "Galerien"
+
+#: includes/global/common.php:736
+msgid "Yes"
+msgstr "Ja"
+
+#: includes/global/common.php:417
+msgid "No Effect"
+msgstr "Kein Effekt"
+
+#: includes/admin/addons.php:280
+msgid "Available Addons"
+msgstr "Verfügbare Add-ons"
+
+#: includes/admin/addons.php:257
+msgid "Refresh Addons"
+msgstr "Add-ons aktualisieren"
+
+#: includes/global/common.php:139
+msgid "Base"
+msgstr "Basis"
+
+#. translators: %s: scheduled date
+#: includes/admin/posttype.php:128
+msgid "M j, Y @ G:i"
+msgstr "j. M Y, G:i"
+
+#: includes/global/posttype.php:64
+msgid "Add New"
+msgstr "Hinzufügen"

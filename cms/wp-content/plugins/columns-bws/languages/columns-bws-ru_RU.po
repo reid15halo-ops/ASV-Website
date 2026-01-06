@@ -1,0 +1,722 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Columns by BestWebSoft\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-03 17:20+0300\n"
+"PO-Revision-Date: 2020-09-04 11:44+0300\n"
+"Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bws_menu\n"
+"X-Poedit-SearchPathExcluded-1: js\n"
+
+#: columns-bws.php:36 includes/class-clmns-add-new.php:24
+msgid "Columns"
+msgstr ""
+
+#: columns-bws.php:39 includes/class-clmns-add-new.php:176
+msgid "Edit Columns"
+msgstr "Изменить колонки"
+
+#: columns-bws.php:39 columns-bws.php:41 includes/class-clmns-add-new.php:176
+msgid "Add New"
+msgstr "Добавить новую"
+
+#: columns-bws.php:44 includes/class-clmns-add-new.php:335
+#: includes/class-clmns-settings.php:61
+msgid "Columns Settings"
+msgstr "Настройки"
+
+#: columns-bws.php:44 columns-bws.php:515 columns-bws.php:902
+#: columns-bws.php:916 includes/class-clmns-add-new.php:25
+#: includes/class-clmns-settings.php:21
+msgid "Settings"
+msgstr "Настройки"
+
+#: columns-bws.php:294
+msgid "column"
+msgstr "колонка"
+
+#: columns-bws.php:295
+msgid "columns"
+msgstr "колонки"
+
+#: columns-bws.php:328
+msgid "Edit"
+msgstr "Редактировать"
+
+#: columns-bws.php:329 columns-bws.php:391 includes/class-clmns-add-new.php:265
+msgid "Delete"
+msgstr "Удалить"
+
+#: columns-bws.php:332 columns-bws.php:553
+msgid "no title"
+msgstr "без названия"
+
+#: columns-bws.php:361 includes/class-clmns-add-new.php:296
+msgid "Title"
+msgstr "Название"
+
+#: columns-bws.php:362
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: columns-bws.php:363
+msgid "Date"
+msgstr "Дата"
+
+#: columns-bws.php:369
+msgid "No Columns Found"
+msgstr "Колонки не найдены"
+
+#: columns-bws.php:486
+msgid "Columns deleted."
+msgstr "Колонки удалены."
+
+#: columns-bws.php:498
+msgid "Search Columns"
+msgstr "Поиск колонок"
+
+#: columns-bws.php:561
+msgid "Sorry, no columns found."
+msgstr "Извините, колонки не найдены."
+
+#: columns-bws.php:778
+msgid "Sorry, nothing found."
+msgstr "Извините, ничего не нйдено."
+
+#: columns-bws.php:816
+msgid ""
+"You are about to remove these items from this slider.\n"
+" 'Cancel' to stop, 'OK' to delete."
+msgstr ""
+"Вы собираетесь удалить эти элементы из этого слайдера.\n"
+" «Отмена» для остановки, «ОК» для удаления."
+
+#: columns-bws.php:817
+msgid ""
+"You are about to remove this item from the slider.\n"
+" 'Cancel' to stop, 'OK' to delete."
+msgstr ""
+"Вы собираетесь удалить этот элемент из слайдера.\n"
+" «Отмена» для остановки, «ОК» для удаления."
+
+#: columns-bws.php:818
+msgid "Insert Media"
+msgstr "Вставить Медиа"
+
+#: columns-bws.php:819
+msgid "Insert"
+msgstr "Вставить"
+
+#: columns-bws.php:820
+msgid "No images found"
+msgstr "Изображения не найдены"
+
+#: columns-bws.php:861
+msgid "Columns per page"
+msgstr "Колонок на странице"
+
+#: columns-bws.php:917
+msgid "FAQ"
+msgstr "FAQ"
+
+#: columns-bws.php:918
+msgid "Support"
+msgstr "Поддержка"
+
+#: includes/class-clmns-add-new.php:157
+msgid "Columns updated."
+msgstr "Колонки обновлены."
+
+#: includes/class-clmns-add-new.php:178
+msgid "Add New Columns"
+msgstr "Добавить Новую Колонку"
+
+#: includes/class-clmns-add-new.php:188
+msgid "Enter title here"
+msgstr "Введите название здесь"
+
+#: includes/class-clmns-add-new.php:197 includes/class-clmns-add-new.php:203
+msgid "Publish"
+msgstr "Публикация"
+
+#: includes/class-clmns-add-new.php:203
+msgid "Update"
+msgstr "Обновить"
+
+#: includes/class-clmns-add-new.php:214
+msgid "Columns Shortcode"
+msgstr "Шорткод"
+
+#: includes/class-clmns-add-new.php:217
+msgid ""
+"Add Columns to your posts, pages, custom post types or widgets by using the "
+"following shortcode:"
+msgstr ""
+"Добавьте Колонки к своим сообщениям, страницам, пользовательским типам "
+"сообщений или виджетам, используя следующий шорткод:"
+
+#: includes/class-clmns-add-new.php:236
+msgid "Columns Content"
+msgstr "Содержание столбцов"
+
+#: includes/class-clmns-add-new.php:251
+msgid "Add New Column"
+msgstr "Добавить новую колонку"
+
+#: includes/class-clmns-add-new.php:262
+msgid "Column"
+msgstr "Колонка"
+
+#: includes/class-clmns-add-new.php:270 includes/class-clmns-add-new.php:416
+#: includes/class-clmns-add-new.php:427
+msgid "Image"
+msgstr "Изображение"
+
+#: includes/class-clmns-add-new.php:273 includes/class-clmns-add-new.php:430
+msgid "Add Media"
+msgstr "Добавить медиа"
+
+#: includes/class-clmns-add-new.php:289
+msgid "Numerical Value of Title"
+msgstr "Числовое значение заголовка"
+
+#: includes/class-clmns-add-new.php:292
+msgid "Quantitative measure related to the title of the column."
+msgstr "Количественная мера, связанная с заголовком столбца."
+
+#: includes/class-clmns-add-new.php:302
+msgid "Description"
+msgstr "Краткое описание"
+
+#: includes/class-clmns-add-new.php:308
+msgid "Display Button"
+msgstr "Отображение кнопки"
+
+#: includes/class-clmns-add-new.php:311
+msgid "Enable to display custom button."
+msgstr "Включить для отображения пользовательской кнопки."
+
+#: includes/class-clmns-add-new.php:315
+msgid "Button Text"
+msgstr "Текст кнопки"
+
+#: includes/class-clmns-add-new.php:321
+msgid "Button Link"
+msgstr "Ссылка кнопки"
+
+#: includes/class-clmns-add-new.php:340
+msgid "Number of Columns"
+msgstr "Количество колонок"
+
+#: includes/class-clmns-add-new.php:343
+msgid "Number of columns in a row."
+msgstr "Количество колонок в строке."
+
+#: includes/class-clmns-add-new.php:347
+msgid "Column Alignment"
+msgstr "Выравнивание колонок"
+
+#: includes/class-clmns-add-new.php:350
+msgid "Left"
+msgstr "Слева"
+
+#: includes/class-clmns-add-new.php:351
+msgid "Right"
+msgstr "Справа"
+
+#: includes/class-clmns-add-new.php:352
+msgid "Center"
+msgstr "Центр"
+
+#: includes/class-clmns-add-new.php:357
+msgid "Style"
+msgstr "Стиль"
+
+#: includes/class-clmns-add-new.php:360
+msgid "Default"
+msgstr "По умолчанию"
+
+#: includes/class-clmns-add-new.php:361
+msgid "With Border"
+msgstr "Рамка"
+
+#: includes/class-clmns-add-new.php:362
+msgid "With Background"
+msgstr "Фон"
+
+#: includes/class-clmns-add-new.php:363
+msgid "With Shadow (for hover)"
+msgstr "Тень (при наведении)"
+
+#: includes/class-clmns-add-new.php:368
+msgid "Border Color"
+msgstr "Цвет рамки"
+
+#: includes/class-clmns-add-new.php:374
+msgid "Border Hover Color"
+msgstr "Цвет рамки при наведении"
+
+#: includes/class-clmns-add-new.php:380
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: includes/class-clmns-add-new.php:386
+msgid "Background Hover Color"
+msgstr "Цвет фона при наведении"
+
+#: includes/class-clmns-add-new.php:392
+msgid "Shadow Hover Color"
+msgstr "Цвет тени при наведении"
+
+#: includes/class-clmns-add-new.php:398
+msgid "Image Position"
+msgstr "Положение изображения"
+
+#: includes/class-clmns-add-new.php:401
+msgid "Above Title"
+msgstr "Перед названием"
+
+#: includes/class-clmns-add-new.php:402
+msgid "Left Title"
+msgstr "Слева от названия"
+
+#: includes/class-clmns-add-new.php:403
+msgid "Left Title and Description"
+msgstr "Слева от названия и описания"
+
+#: includes/class-clmns-add-new.php:404
+msgid "Background Left"
+msgstr "Фон слева"
+
+#: includes/class-clmns-add-new.php:405
+msgid "Background Center"
+msgstr "Фон по центру"
+
+#: includes/class-clmns-add-new.php:411
+msgid "Column Widget Background"
+msgstr "Фон виджета"
+
+#: includes/class-clmns-add-new.php:414 includes/class-clmns-add-new.php:421
+msgid "Color"
+msgstr "Цвет"
+
+#: includes/class-clmns-add-new.php:446
+msgid "Column Widget Background Opacity"
+msgstr "Непрозрачность виджета"
+
+#: includes/class-clmns-settings.php:22
+msgid "Misc"
+msgstr "Разное"
+
+#: includes/class-clmns-settings.php:23
+msgid "Custom Code"
+msgstr "Пользовательский код"
+
+#: includes/class-clmns-settings.php:50
+msgid "Settings saved."
+msgstr "Настройки сохранены."
+
+#: includes/class-clmns-settings.php:66
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: includes/class-clmns-settings.php:70
+msgid "Enable if your theme doesn't use Bootstrap."
+msgstr "Включите, если ваша тема не использует Bootstrap."
+
+#~ msgid "All plugin settings were restored."
+#~ msgstr "Все настройки плагина восстановлены."
+
+#~ msgid ""
+#~ "If you would like to add buttons to your page or post, please use %s "
+#~ "button"
+#~ msgstr ""
+#~ "Если вы хотите добавить кнопки на вашу страницу или пост, то используйте "
+#~ "кнопку %s"
+
+#~ msgid ""
+#~ "You can add buttons to your page or post by clicking on %s button in the "
+#~ "content edit block using the Visual mode. If the button isn't displayed, "
+#~ "please use the shortcode %s"
+#~ msgstr ""
+#~ "Вы можете добавить кнопки на вашу страницу или пост, нажав на кнопку %s в "
+#~ "блоке редактирования контента в режиме Visual. Если кнопка не "
+#~ "отображается, пожалуйста, используйте шорткод %s"
+
+#~ msgid "My Page"
+#~ msgstr "Моя страница"
+
+#~ msgid "Like"
+#~ msgstr "Нравиться"
+
+#~ msgid "Share"
+#~ msgstr "Поделиться"
+
+#~ msgid "Before"
+#~ msgstr "Перед"
+
+#~ msgid "After"
+#~ msgstr "После"
+
+#~ msgid "Before and After"
+#~ msgstr "Перед и после"
+
+#~ msgid "Save Changes"
+#~ msgstr "Сохранить изменения"
+
+#~ msgid "Add buttons to your page or post"
+#~ msgstr "Добавить кнопки на вашу страницу или пост"
+
+#~ msgid "Facebook Button Settings"
+#~ msgstr "Настройки Facebook Button"
+
+#~ msgid "Error: File size > 32K"
+#~ msgstr "Ошибка: Размер файла > 32К"
+
+#~ msgid "Error: Invalid file type"
+#~ msgstr "Ошибка: Некорректный тип файла"
+
+#~ msgid "Upload successful."
+#~ msgstr "Загрузка прошла удачно."
+
+#~ msgid "Error: moving file failed"
+#~ msgstr "Ошибка: При перемещении произошла ошибка"
+
+#~ msgid "Error: check image width or height"
+#~ msgstr "Ошибка: Проверьте ширину и высоту изображения"
+
+#~ msgid "Uploading Error: check image properties"
+#~ msgstr "Ошибка загрузки: Проверьте опции изображения"
+
+#~ msgid "How to Use Step-by-step Instruction"
+#~ msgstr "Инструкция по использованию"
+
+#~ msgid "Extra settings"
+#~ msgstr "Дополнительные настройки"
+
+#~ msgid "Go PRO"
+#~ msgstr "Перейти на PRO версию"
+
+#~ msgid "Please, enable JavaScript in Your browser."
+#~ msgstr "Пожалуйста, включите поддержку JavaScript в вашем браузере."
+
+#~ msgid "Facebook buttons language"
+#~ msgstr "Язык для Facebook кнопки"
+
+#~ msgid "Change the language of Facebook Button"
+#~ msgstr "Выберите язык для Facebook кнопок"
+
+#~ msgid "Use the current site language"
+#~ msgstr "Использовать текущий язык сайта"
+
+#~ msgid "Using"
+#~ msgstr "Используя"
+
+#~ msgid "Activate"
+#~ msgstr "Активировать"
+
+#~ msgid "Download"
+#~ msgstr "Загрузить"
+
+#~ msgid "Display buttons in excerpt"
+#~ msgstr "Отображать кнопки для цитаты"
+
+#~ msgid "Close"
+#~ msgstr "Закрыть"
+
+#~ msgid "Meta tags"
+#~ msgstr "Мета теги"
+
+#~ msgid "Featured Image"
+#~ msgstr "Миниатюра записи"
+
+#~ msgid "Custom Image"
+#~ msgstr "Пользовательское изображение"
+
+#~ msgid "This image will be used for all of the posts"
+#~ msgstr "Это изображение будет использоваться для всех постов"
+
+#~ msgid "Post excerpt"
+#~ msgstr "Цитата"
+
+#~ msgid "This description will be used for all of the posts"
+#~ msgstr "Это краткое описание будет использоваться для всех постов"
+
+#~ msgid "If you upgrade to Pro version all your settings will be saved."
+#~ msgstr "При установке Pro версии плагина, все ваши настройки сохраняются."
+
+#~ msgid "Unlock premium options by upgrading to Pro version"
+#~ msgstr "Активируйте премиум опции обновившись до Pro версии"
+
+#~ msgid "Learn More"
+#~ msgstr "Подробнее"
+
+#~ msgid "Your Facebook ID or username"
+#~ msgstr "Ваш Facebook ID или имя пользователя"
+
+#~ msgid "\"My page\" button image"
+#~ msgstr "Изображение кнопки \"Моя страница\""
+
+#~ msgid "Standard Facebook image"
+#~ msgstr "Стандартная картинка Facebook"
+
+#~ msgid "Custom Facebook image"
+#~ msgstr "Пользовательская картинка Facebook"
+
+#~ msgid ""
+#~ "To use custom image you need to setup permissions to upload directory of "
+#~ "your site"
+#~ msgstr ""
+#~ "Для использования кастомного изображения Вам нужно выдать права доступа "
+#~ "на папку загрузок на вашем сайте"
+
+#~ msgid "Current image"
+#~ msgstr "Текущее изображение"
+
+#~ msgid ""
+#~ "Image properties: max image width:100px; max image height:40px; max image "
+#~ "size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
+#~ msgstr ""
+#~ "Опции изображения для загрузки: максимальная ширина:100px; максимальная "
+#~ "высота:40px; максимальный размер:32Kb; тип файла:\"jpg\", \"jpeg\", \"png"
+#~ "\"."
+
+#~ msgid "Like button action"
+#~ msgstr "Действие кнопки \"Like\""
+
+#~ msgid "Recommend"
+#~ msgstr "Рекомендую"
+
+#~ msgid "Show faces"
+#~ msgstr "Показать лица"
+
+#~ msgid "Layout width"
+#~ msgstr "Ширина блока"
+
+#~ msgid "Color scheme"
+#~ msgstr "Цветовая схема"
+
+#~ msgid "Dark"
+#~ msgstr "Тёмная"
+
+#~ msgid "Html tag for \"Like\" button"
+#~ msgstr "Html тэг для кнопки \"Нравиться\""
+
+#~ msgid "Use this tag to improve validation of your site"
+#~ msgstr "Используйте этот тэг для лучшей валидации вашего сайта"
+
+#~ msgid "\"Like\" for an entire site on every page:"
+#~ msgstr "Ставить \"Нравиться\"  всему сайту на каждой странице:"
+
+#~ msgid ""
+#~ "Notice: \"Like for the entire site\" option does not create an extra "
+#~ "button. This option merely allows your users to like the entire website "
+#~ "when this option is enabled, or a single post when this option is "
+#~ "disabled, when clicking the regular \"Like\" button."
+#~ msgstr ""
+#~ "Внимание: опция \"Нравиться для всего сайта\" - не создает  "
+#~ "дополнительную кнопку. Эта опция позволяет при клике пользователями на "
+#~ "стандартную кнопку ставить \"Нравиться\" для всего сайта, если эта опция "
+#~ "включена, или \"Нравиться\" для отдельной записи, когда эта опция "
+#~ "выключена."
+
+#~ msgid "Facebook Button preview:"
+#~ msgstr "Предварительный просмотр Facebook кнопок"
+
+#~ msgid ""
+#~ "Please choose the necessary post types (or single pages) where Facebook "
+#~ "button will be displayed:"
+#~ msgstr ""
+#~ "Пожалуйста, выберите те типы постов (или отдельные страницы), где будут "
+#~ "отображаться кнопки Facebook:"
+
+#~ msgid "Show URL for pages"
+#~ msgstr "Отображать URL для страниц"
+
+#~ msgid "Example of the site's pages tree"
+#~ msgstr "Пример дерева страниц сайта"
+
+#~ msgid "Example of site pages' tree"
+#~ msgstr "Пример дерева страниц сайта"
+
+#~ msgid "None"
+#~ msgstr "Не использовать"
+
+#~ msgid "Custom description"
+#~ msgstr "Пользовательское краткое описание"
+
+#~ msgid "Notice:"
+#~ msgstr "Внимание:"
+
+#~ msgid ""
+#~ "The plugin's settings have been changed. In order to save them please "
+#~ "don't forget to click the 'Save Changes' button."
+#~ msgstr ""
+#~ "Настройки плагина были изменены. Для того, чтобы сохранить их, "
+#~ "пожалуйста, не забудьте нажать кнопку \"Сохранить\"."
+
+#~ msgid "pixels"
+#~ msgstr "px"
+
+#~ msgid "Go"
+#~ msgstr "Перейти на"
+
+#~ msgid "Are you sure you want to restore all settings by default?"
+#~ msgstr ""
+#~ "Вы уверены что хотите восстановить все настройки плагина к настройкам по-"
+#~ "умолчанию?"
+
+#~ msgid "Yes, restore all settings"
+#~ msgstr "Да, восстановить все настройки"
+
+#~ msgid "No, go back to the settings page"
+#~ msgstr "Нет, вернутся на страницу настроек"
+
+#~ msgid "Restore all plugin settings to defaults"
+#~ msgstr "Восстановить все настройки плагина к настройкам по-умолчанию"
+
+#~ msgid "Restore settings"
+#~ msgstr "Восстановить настройки"
+
+#~ msgid "Choose display settings:"
+#~ msgstr "Выбор опций отображения:"
+
+#~ msgid "Facebook image:"
+#~ msgstr "Facebook изображение:"
+
+#~ msgid "requires"
+#~ msgstr "требует"
+
+#~ msgid ""
+#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
+#~ "and try again."
+#~ msgstr ""
+#~ "или выше, поэтому он был деактивирован! Пожалуйста, обновите WordPress и "
+#~ "попробуйте еще раз."
+
+#~ msgid "Back to the WordPress"
+#~ msgstr "Вернуться к WordPress на"
+
+#~ msgid "Wrong license key"
+#~ msgstr "Неправильный лицензионный ключ"
+
+#~ msgid ""
+#~ "Something went wrong. Try again later. If the error will appear again, "
+#~ "please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</"
+#~ "a>. We are sorry for inconvenience."
+#~ msgstr ""
+#~ "Что-то пошло не так. Повторите попытку позже. Если ошибка появится снова, "
+#~ "пожалуйста, свяжитесь с нами <a href=http://support.bestwebsoft."
+#~ "com>BestWebSoft</a>. Приносим извинения за неудобства."
+
+#~ msgid "This license key is bind to another site"
+#~ msgstr "Этот лицензионный ключ привязан к другому сайту"
+
+#~ msgid ""
+#~ "Unfortunately, you have exceeded the number of available tries. Please, "
+#~ "upload the plugin manually."
+#~ msgstr ""
+#~ "К сожалению, вы превысили количество доступных попыток в день. "
+#~ "Пожалуйста, загрузите плагин вручную."
+
+#~ msgid "Failed to open the zip archive. Please, upload the plugin manually"
+#~ msgstr "Не удалось открыть архив ZIP. Пожалуйста, загрузите плагин вручную"
+
+#~ msgid ""
+#~ "Your server does not support either ZipArchive or Phar. Please, upload "
+#~ "the plugin manually"
+#~ msgstr ""
+#~ "Ваш сервер не поддерживает ни библиотеку ZipArchive, ни библиотеку Phar. "
+#~ "Пожалуйста, загрузите плагин вручную"
+
+#~ msgid ""
+#~ "Failed to download the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Не удалось загрузить архив плагина. Пожалуйста, загрузите плагин вручную"
+
+#~ msgid ""
+#~ "Something went wrong. Try again later or upload the plugin manually. We "
+#~ "are sorry for inconvienience."
+#~ msgstr ""
+#~ "Что-то пошло не так. Повторите попытку позже или загрузите плагин "
+#~ "вручную. Приносим извинения за неудобства."
+
+#~ msgid "Please, enter Your license key"
+#~ msgstr "Пожалуйста, введите Ваш лицензионный ключ"
+
+#~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+#~ msgstr " Если вам понравился плагин то поставте нам 5 звезд на WordPress"
+
+#~ msgid "Rate the plugin"
+#~ msgstr "Оценить плагин"
+
+#~ msgid "If there is something wrong about it, please contact us"
+#~ msgstr "Если у вас есть какие-то вопросы, обращайтесь"
+
+#~ msgid ""
+#~ "Congratulations! The PRO version of the plugin is successfully download "
+#~ "and activated."
+#~ msgstr ""
+#~ "Поздравляем! PRO версия плагина была успешно загружена и активирована."
+
+#~ msgid "Please, go to"
+#~ msgstr "Пожалуйста, перейдите на"
+
+#~ msgid "You will be redirected automatically in 5 seconds."
+#~ msgstr "Вы будете перенаправлены автоматически через 5 секунд."
+
+#~ msgid "You can download and activate"
+#~ msgstr "Вы можете скачать и активировать"
+
+#~ msgid "version of this plugin by entering Your license key."
+#~ msgstr "версию этого плагина, введя ваш лицензионный ключ."
+
+#~ msgid ""
+#~ "You can find your license key on your personal page Client area, by "
+#~ "clicking on the link"
+#~ msgstr ""
+#~ "Вы можете найти ваш лицензионный ключ на вашей личной странице Client "
+#~ "area, нажав на ссылку"
+
+#~ msgid ""
+#~ "(your username is the email you specify when purchasing the product)."
+#~ msgstr ""
+#~ "(ваше имя пользователя - это электронный адрес, указанный при покупке "
+#~ "продукта)."
+
+#~ msgid "Go!"
+#~ msgstr "Перейти!"
+
+#~ msgid ""
+#~ "Unfortunately, you have exceeded the number of available tries per day. "
+#~ "Please, upload the plugin manually."
+#~ msgstr ""
+#~ "К сожалению, вы превысили количество доступных попыток в день. "
+#~ "Пожалуйста, загрузите плагин вручную."
+
+#~ msgid ""
+#~ "It's time to upgrade your <strong>Facebook Like Button</strong> to "
+#~ "<strong>PRO</strong> version"
+#~ msgstr ""
+#~ "Пора обновить ваш <strong>плагин Facebook Like Button</strong> до "
+#~ "<strong>PRO</strong> версии"
+
+#~ msgid "Extend standard plugin functionality with new great options"
+#~ msgstr "Расширение стандартного функционала плагина новыми опциями"
+
+#~ msgid ""
+#~ "This functionality is available in the Pro version of the plugin. For "
+#~ "more details, please follow the link"
+#~ msgstr ""
+#~ "Данный функционал доступен в Про версии плагина. Для более детальной "
+#~ "информации смотрите"

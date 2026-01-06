@@ -1,0 +1,166 @@
+== Changelog ==
+
+= 1.1.1 =
+
+*Release date: July 13, 2024*
+
+* Small quality fixes (from static code analyzer)
+
+= 1.1.0 =
+
+*Release date: April 23, 2024*
+
+* Configuration to select and order the pages and/or posts by date modified or date published
+* new field {published_date} in the template string to show the date the page or post was published ("post date")
+* new field {editor} in the template string to show the last editor of the page or post
+
+= 1.0.5 =
+
+*Release date: November 12, 2023*
+
+* Bugfix for limit the ignored pages or posts to the number of posts per page (regression of 1.0.2).
+
+= 1.0.4 =
+
+*Release date: November 11, 2023*
+
+* Bugfix for block editor support: adapted to changes in the block editor handling
+
+= 1.0.3 =
+
+*Release date: November 08, 2023*
+
+* Bugfix for 1.0.2: removed refactorings (type information) that occured errors with some older php versions
+
+= 1.0.2 =
+
+*Release date: November 07, 2023*
+
+* Bugfix for interference with other plugins. Uses now the method WP_Query to get the posts and pages to ignore
+
+= 1.0.1 =
+
+*Release date: September 05, 2022*
+
+* Bugfix for exclude only up to five posts 
+
+= 1.0.0 =
+
+*Release date: December 09, 2020*
+
+* Introducing template mechanism in the block editor 
+* The configuration field 'show author' in the block editor is replaced by the template mechanism
+* The template mechanism is now "feature complete"
+
+= 0.9.5 =
+
+*Release date: December 08, 2020*
+
+* Introducing template mechanism in widget 
+* The configuration field 'show author' in the widget is replaced by the template mechanism
+
+= 0.9.0 =
+
+*Release date: November 29, 2020*
+
+* Introducing template mechanism in shortcode (also planned for widget and block)
+
+= 0.8.7 =
+
+*Release date: October 24, 2020*
+
+* Bugfix for not using the right url of a blog post when permalink was customized
+
+= 0.8.6 =
+
+*Release date: October 8, 2020*
+
+* Bugfix for hard coded title heading (h3) and hard coded id
+
+= 0.8.5 =
+
+*Release date: October 7, 2020*
+
+* Added support for also showing the author of the post (deactivated by default)
+
+= 0.8.1 =
+
+*Release date: April 24, 2019*
+
+* Bugfix for incorrect sorting and amount of posts (thanks to osthafen) 
+
+= 0.8.0 =
+
+*Release date: January 11, 2019*
+
+* Added first support for gutenberg block editor
+
+= 0.7.0 =
+
+*Release date: November 18, 2018*
+
+* Added support for shortcode
+* some refactorings
+
+= 0.6.6 =
+
+*Release date: August 1, 2018*
+
+* Bugfix for sorting pages two times but not sorting posts
+* License set to GPLv3 (was mixture of V2 and V3 before)
+
+= 0.6.5 =
+
+*Release date: February 2, 2018*
+
+* Code cleanup (removed usage of deprecated functions)
+
+= 0.6.0 =
+
+*Release date: January 17, 2018*
+
+* Added support for translations
+* Icon for the plugin directory created
+
+= 0.5.0 =
+
+*Release date: December 29, 2017*
+
+* Added support for also showing recent changed posts (deactivated by default)
+* It's also possible to exclude posts from being listed in the widget.
+
+= 0.4.1 =
+
+*Release date: December 6, 2017*
+
+* Bugfix for excluding hierarchical pages 
+
+= 0.4.0 =
+
+*Release date: January 9, 2015*
+
+* Added possibility to exclude pages listed in the widget.
+* Tested with WordPress 4.2
+
+= 0.3.2 =
+
+*Release date: December 17, 2014*
+
+* Tested with WordPress 4.0
+
+= 0.3.1 =
+
+*Release date: April 18, 2014*
+
+* Changed Plugin link directly to official Web Page
+
+= 0.3.0 =
+
+*Release date: December 28, 2013*
+
+* Changed to class
+* Added configuration dialog for number of entries and title
+
+= 0.2.0 =
+
+* First usage on own website

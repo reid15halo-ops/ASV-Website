@@ -1,0 +1,61 @@
+# Translation of Plugins - List Last Changes - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - List Last Changes - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-04-24 16:24:19+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - List Last Changes - Stable (latest release)\n"
+
+#: list-last-changes.php:167 block.js:91
+msgid "Use published date"
+msgstr "Verwende das Veröffentlichungsdatum"
+
+#: list-last-changes.php:168 block.js:101
+msgid "Template"
+msgstr "Template"
+
+#: list-last-changes.php:164
+msgid "Number of shown changes"
+msgstr "Anzahl der gezeigten Änderungen"
+
+#. Author URI of the plugin
+#: list-last-changes.php
+msgid "http://www.rolandbaer.ch/"
+msgstr "http://www.rolandbaer.ch/"
+
+#. Author of the plugin
+#: list-last-changes.php
+msgid "Roland Bär"
+msgstr "Roland Bär"
+
+#. Description of the plugin
+#: list-last-changes.php list-last-changes.php:32 block.js:12
+msgid "Shows a list of the last changes of a WordPress site."
+msgstr "Zeigt eine Liste der letzten Änderungen einer WordPress-Website."
+
+#. Plugin URI of the plugin
+#: list-last-changes.php
+msgid "http://www.rolandbaer.ch/software/wordpress/plugin-last-changes/"
+msgstr "http://www.rolandbaer.ch/software/wordpress/plugin-last-changes/"
+
+#: list-last-changes.php:166
+msgid "Show changed Posts"
+msgstr "Zeige geänderte Beiträge"
+
+#: list-last-changes.php:165
+msgid "Show changed Pages"
+msgstr "Zeige geänderte Seiten"
+
+#: list-last-changes.php:163
+msgid "Title"
+msgstr "Titel"
+
+#. Plugin Name of the plugin
+#: list-last-changes.php list-last-changes.php:34 block.js:11
+msgid "List Last Changes"
+msgstr "List Last Changes"

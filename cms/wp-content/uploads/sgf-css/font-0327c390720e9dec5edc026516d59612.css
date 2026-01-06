@@ -1,0 +1,42 @@
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 300;
+	font-style: normal;
+	src: local('Montserrat Light'), local('Montserrat-Light'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_cJD3gnD_vx3rCs.woff2) format('woff2'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_cJD3gnD-A.woff) format('woff');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-style: normal;
+	src: local('Montserrat Regular'), local('Montserrat-Regular'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTUSjIg1_i6t8kCHKm459WlhzQ.woff) format('woff');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-style: normal;
+	src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_bZF3gnD_vx3rCs.woff2) format('woff2'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_bZF3gnD-A.woff) format('woff');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 700;
+	font-style: normal;
+	src: local('Montserrat Bold'), local('Montserrat-Bold'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_dJE3gnD_vx3rCs.woff2) format('woff2'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_dJE3gnD-A.woff) format('woff');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 800;
+	font-style: normal;
+	src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_c5H3gnD_vx3rCs.woff2) format('woff2'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_c5H3gnD-A.woff) format('woff');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 900;
+	font-style: normal;
+	src: local('Montserrat Black'), local('Montserrat-Black'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_epG3gnD_vx3rCs.woff2) format('woff2'), url(//asv-petri-heil.de/cms/wp-content/uploads/sgf-css/JTURjIg1_i6t8kCHKm45_epG3gnD-A.woff) format('woff');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
