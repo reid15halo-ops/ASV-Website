@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASV Content Creator Studio 🎣</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0f1c32 100%);
+            color: #fff;
+        }
+
+        /* Navigation Tabs */
+        .app-header {
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00b4d8 0%, #48cae4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .nav-tab {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+            border-color: transparent;
+            color: #fff;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* Cards & Panels */
+        .panel {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .panel-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+        }
+
+        select,
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        select:focus,
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #00b4d8;
+        }
+
+        select option {
+            background: #1a2744;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #00ff94 0%, #00d4ff 100%);
+            color: #000;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        /* Grid Layouts */
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .two-col-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-tabs {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Meme Templates Grid */
+        .meme-templates {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .meme-template {
+            aspect-ratio: 1;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .meme-template:hover {
+            border-color: rgba(0, 180, 216, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .meme-template.selected {
+            border-color: #00b4d8;
+            background: rgba(0, 180, 216, 0.1);
+        }
+
+        .meme-template-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .meme-template-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Canvas Preview */
+        .preview-container {
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        #memeCanvas,
+        #imageCanvas,
+        #videoCanvas {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Text Output */
+        .output-area {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 1.25rem;
+            min-height: 180px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        /* Color Picker */
+        .color-options {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .color-option {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.selected {
+            border-color: #fff;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #00ff94 0%, #00d4ff 100%);
+            color: #000;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Video Animation */
+        .video-preview {
+            position: relative;
+            width: 360px;
+            height: 640px;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .story-slide {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .story-slide.active {
+            opacity: 1;
+        }
+
+        .story-emoji {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .story-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .story-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .play-btn {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+        }
+
+        /* Share Buttons */
+        .share-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .share-btn {
+            flex: 1;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .share-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🎣</span>
+                <span class="logo-text">ASV Content Studio</span>
+            </div>
+            <nav class="nav-tabs">
+                <button class="nav-tab active" data-tab="text">📝 Text</button>
+                <button class="nav-tab" data-tab="memes">😂 Memes</button>
+                <button class="nav-tab" data-tab="images">🖼️ Bilder</button>
+                <button class="nav-tab" data-tab="videos">🎬 Videos</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- TEXT GENERATOR -->
+        <section id="text-section" class="content-section active">
+            <div class="two-col-grid">
+                <div>
+                    <div class="panel">
+                        <h2 class="panel-title">⚙️ Post konfigurieren</h2>
+                        <div class="form-group">
+                            <label>Plattform</label>
+                            <select id="textPlatform">
+                                <option value="instagram">📷 Instagram</option>
+                                <option value="facebook">📘 Facebook</option>
+                                <option value="tiktok">🎵 TikTok</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Zielgruppe</label>
+                            <select id="textAgeGroup">
+                                <option value="youth">🧒 Jugendliche (10-18)</option>
+                                <option value="young_adults">👩‍💼 Junge Erwachsene (18-35)</option>
+                                <option value="adults">👨‍👩‍👧 Erwachsene (35-50)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Art des Posts</label>
+                            <select id="textPostType">
+                                <option value="event">📅 Event-Ankündigung</option>
+                                <option value="recruitment">🚀 Mitglieder werben</option>
+                                <option value="camp">⛺ Zeltlager</option>
+                                <option value="general">🎣 Allgemein</option>
+                                <option value="success">🏆 Erfolg / Fang</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Event/Thema (optional)</label>
+                            <input type="text" id="textEvent" placeholder="z.B. Fischessen am Karfreitag">
+                        </div>
+                        <div class="form-group">
+                            <label>Zusätzliche Info</label>
+                            <textarea id="textNote" rows="3" placeholder="Weitere Details..."></textarea>
+                        </div>
+                        <button class="btn btn-primary" onclick="generateText()">✨ Text generieren</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel">
+                        <h2 class="panel-title">📝 Generierter Post</h2>
+                        <div class="output-area" id="textOutput">
+                            <span style="color: rgba(255,255,255,0.4);">Klicke auf "Text generieren" um zu
+                                starten...</span>
+                        </div>
+                        <div class="btn-group" style="margin-top: 1rem;">
+                            <button class="btn btn-secondary" onclick="generateText()">🔄 Neu</button>
+                            <button class="btn btn-success" onclick="copyText()">📋 Kopieren</button>
+                        </div>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareWhatsApp()">💬 WhatsApp</button>
+                            <button class="share-btn" onclick="shareFacebook()">📘 Facebook</button>
+                            <button class="share-btn" onclick="shareEmail()">✉️ E-Mail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEME GENERATOR -->
+        <section id="memes-section" class="content-section">
+            <div class="two-col-grid">
+                <div>
+                    <div class="panel">
+                        <h2 class="panel-title">😂 Meme auswählen</h2>
+                        <div class="meme-templates">
+                            <div class="meme-template selected" data-meme="drake">
+                                <span class="meme-template-icon">👆👇</span>
+                                <span class="meme-template-name">Drake Format</span>
+                            </div>
+                            <div class="meme-template" data-meme="distracted">
+                                <span class="meme-template-icon">👀</span>
+                                <span class="meme-template-name">Abgelenkt</span>
+                            </div>
+                            <div class="meme-template" data-meme="expanding">
+                                <span class="meme-template-icon">🧠</span>
+                                <span class="meme-template-name">Galaxy Brain</span>
+                            </div>
+                            <div class="meme-template" data-meme="change">
+                                <span class="meme-template-icon">📋</span>
+                                <span class="meme-template-name">Change My Mind</span>
+                            </div>
+                            <div class="meme-template" data-meme="button">
+                                <span class="meme-template-icon">🔘</span>
+                                <span class="meme-template-name">Hard Choice</span>
+                            </div>
+                            <div class="meme-template" data-meme="success">
+                                <span class="meme-template-icon">✊</span>
+                                <span class="meme-template-name">Success Kid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <h2 class="panel-title">✏️ Meme-Text</h2>
+                        <div class="form-group">
+                            <label>Oberer Text</label>
+                            <input type="text" id="memeTopText" placeholder="z.B. Hausaufgaben machen"
+                                oninput="updateMeme()">
+                        </div>
+                        <div class="form-group">
+                            <label>Unterer Text</label>
+                            <input type="text" id="memeBottomText" placeholder="z.B. Mit ASV Jugend angeln gehen"
+                                oninput="updateMeme()">
+                        </div>
+                        <button class="btn btn-primary" onclick="generateRandomMeme()">🎲 Zufälliges Meme</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel">
+                        <h2 class="panel-title">👁️ Vorschau</h2>
+                        <div class="preview-container">
+                            <canvas id="memeCanvas" width="600" height="600"></canvas>
+                        </div>
+                        <div class="btn-group" style="margin-top: 1rem;">
+                            <button class="btn btn-success" onclick="downloadMeme()">💾 Herunterladen</button>
+                            <button class="btn btn-secondary" onclick="copyMemeToClipboard()">📋 Kopieren</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMAGE GENERATOR -->
+        <section id="images-section" class="content-section">
+            <div class="two-col-grid">
+                <div>
+                    <div class="panel">
+                        <h2 class="panel-title">🎨 Grafik erstellen</h2>
+                        <div class="form-group">
+                            <label>Format</label>
+                            <select id="imageFormat" onchange="updateImage()">
+                                <option value="square">📱 Instagram Post (1080x1080)</option>
+                                <option value="story">📱 Story (1080x1920)</option>
+                                <option value="landscape">🖥️ Facebook Cover (1200x628)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Stil</label>
+                            <select id="imageStyle" onchange="updateImage()">
+                                <option value="gradient">🌈 Gradient</option>
+                                <option value="nature">🌲 Natur</option>
+                                <option value="water">🌊 Wasser</option>
+                                <option value="dark">🌙 Dunkel</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Haupttext</label>
+                            <input type="text" id="imageTitle" value="ASV Petri Heil" oninput="updateImage()">
+                        </div>
+                        <div class="form-group">
+                            <label>Untertitel</label>
+                            <input type="text" id="imageSubtitle" value="Großostheim" oninput="updateImage()">
+                        </div>
+                        <div class="form-group">
+                            <label>Emoji/Icon</label>
+                            <input type="text" id="imageEmoji" value="🎣" oninput="updateImage()" maxlength="2">
+                        </div>
+                        <div class="form-group">
+                            <label>Akzentfarbe</label>
+                            <div class="color-options">
+                                <div class="color-option selected" style="background: #00b4d8" data-color="#00b4d8">
+                                </div>
+                                <div class="color-option" style="background: #00ff94" data-color="#00ff94"></div>
+                                <div class="color-option" style="background: #ff6b6b" data-color="#ff6b6b"></div>
+                                <div class="color-option" style="background: #ffd93d" data-color="#ffd93d"></div>
+                                <div class="color-option" style="background: #c77dff" data-color="#c77dff"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel">
+                        <h2 class="panel-title">👁️ Vorschau</h2>
+                        <div class="preview-container" id="imagePreviewContainer">
+                            <canvas id="imageCanvas" width="540" height="540"></canvas>
+                        </div>
+                        <div class="btn-group" style="margin-top: 1rem;">
+                            <button class="btn btn-success" onclick="downloadImage()">💾 Herunterladen</button>
+                            <button class="btn btn-secondary" onclick="copyImageToClipboard()">📋 Kopieren</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO GENERATOR -->
+        <section id="videos-section" class="content-section">
+            <div class="two-col-grid">
+                <div>
+                    <div class="panel">
+                        <h2 class="panel-title">🎬 Story erstellen</h2>
+                        <div class="form-group">
+                            <label>Story-Typ</label>
+                            <select id="videoType" onchange="prepareVideo()">
+                                <option value="event">📅 Event-Ankündigung</option>
+                                <option value="recruitment">🚀 Mitglieder werben</option>
+                                <option value="camp">⛺ Zeltlager-Promo</option>
+                                <option value="countdown">⏰ Countdown</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Titel (Slide 1)</label>
+                            <input type="text" id="videoTitle1" value="ASV Jugend" oninput="prepareVideo()">
+                        </div>
+                        <div class="form-group">
+                            <label>Text (Slide 2)</label>
+                            <input type="text" id="videoTitle2" value="Zeltlager 2026" oninput="prepareVideo()">
+                        </div>
+                        <div class="form-group">
+                            <label>Call-to-Action (Slide 3)</label>
+                            <input type="text" id="videoTitle3" value="Jetzt anmelden!" oninput="prepareVideo()">
+                        </div>
+                        <div class="form-group">
+                            <label>Hintergrund</label>
+                            <select id="videoBg" onchange="prepareVideo()">
+                                <option value="blue">🔵 Blau</option>
+                                <option value="green">🟢 Grün</option>
+                                <option value="purple">🟣 Lila</option>
+                                <option value="orange">🟠 Orange</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel">
+                        <h2 class="panel-title">📱 Story Vorschau</h2>
+                        <div class="video-preview" id="videoPreview">
+                            <div class="story-slide active" id="slide0">
+                                <span class="story-emoji">🎣</span>
+                                <h2 class="story-title" id="slideText0">ASV Jugend</h2>
+                                <p class="story-subtitle">Großostheim</p>
+                            </div>
+                            <div class="story-slide" id="slide1">
+                                <span class="story-emoji">⛺</span>
+                                <h2 class="story-title" id="slideText1">Zeltlager 2026</h2>
+                                <p class="story-subtitle">Das Abenteuer wartet!</p>
+                            </div>
+                            <div class="story-slide" id="slide2">
+                                <span class="story-emoji">🚀</span>
+                                <h2 class="story-title" id="slideText2">Jetzt anmelden!</h2>
+                                <p class="story-subtitle">asv-petriheil.de</p>
+                            </div>
+                            <button class="btn btn-primary play-btn" onclick="playStory()">▶️ Abspielen</button>
+                        </div>
+                        <div class="btn-group" style="margin-top: 1rem;">
+                            <button class="btn btn-success" onclick="exportStoryAsGif()">💾 Als GIF speichern</button>
+                            <button class="btn btn-secondary" onclick="exportStoryFrames()">🖼️ Einzelbilder</button>
+                        </div>
+                        <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.75rem;">
+                            💡 Tipp: Nutze die Einzelbilder um sie als Instagram Story hochzuladen
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast" id="toast">✓ Kopiert!</div>
+
+    <script>
+        // ========== TAB NAVIGATION ==========
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab + '-section').classList.add('active');
+            });
+        });
+
+        // ========== TEXT GENERATOR ==========
+        const textTemplates = {
+            youth: {
+                event: ["🔥 SAVE THE DATE!\n\n{event} steht an!\n📅 Sei dabei!\n\n#ASVJugend #Angeln #Abenteuer"],
+                recruitment: ["🎣 BOCK AUF ABENTEUER?\n\n✅ Zeltlager\n✅ Lagerfeuer\n✅ Neue Freunde\n✅ Angeln lernen\n\nNur 38€/Jahr!\n\n#ASVJugend #Großostheim"],
+                camp: ["⛺ ZELTLAGER-VIBES!\n\nEine Woche Action am See:\n🎣 Angeln\n🔥 Lagerfeuer\n👯 Beste Crew\n\nBist du dabei? 💪\n\n#Zeltlager #ASV"],
+                general: ["Petri Heil! 🎣\n\n{note}\n\n#Angeln #ASVJugend"],
+                success: ["🏆 DICKES PETRI HEIL!\n\n{note}\n\n#BigCatch #Angelerfolg"]
+            },
+            young_adults: {
+                event: ["📅 {event}\n\nEntspannung am Wasser.\n{note}\n\n#ASVPetriHeil #Angeln"],
+                recruitment: ["🌊 Dein Ausgleich zum Alltag.\n\nAm Wasser ist alles easy.\n\n→ After-Work-Angeln\n→ Keine Vorkenntnisse nötig\n\n#WorkLifeBalance"],
+                camp: ["⛺ Unsere Jugend im Abenteuer!\n\n{note}\n\n#ASVJugend #Vereinsleben"],
+                general: ["Am Wasser findet man zu sich selbst. 🌅\n\n{note}\n\n#Mindfulness #Angeln"],
+                success: ["🐟 Petri Heil!\n\n{note}\n\n#Angelerfolg"]
+            },
+            adults: {
+                event: ["📅 Einladung: {event}\n\n{note}\n\nWir freuen uns auf Sie!\n\n#ASVPetriHeil #Großostheim"],
+                recruitment: ["🎣 Tradition. Natur. Gemeinschaft.\n\nASV Petri Heil seit 1966.\n\n✓ Vereinssee\n✓ Familien willkommen\n\n#Angelverein #Familie"],
+                camp: ["⛺ Jugendarbeit liegt uns am Herzen.\n\n{note}\n\n#ASVJugend #Tradition"],
+                general: ["Petri Heil! 🎣\n\n{note}\n\n#ASVPetriHeil"],
+                success: ["🏆 Herzlichen Glückwunsch zum Fang!\n\n{note}\n\n#Angelerfolg"]
+            }
+        };
+
+        let currentText = '';
+
+        function generateText() {
+            const age = document.getElementById('textAgeGroup').value;
+            const type = document.getElementById('textPostType').value;
+            const event = document.getElementById('textEvent').value || 'Unsere nächste Veranstaltung';
+            const note = document.getElementById('textNote').value || '';
+
+            const templates = textTemplates[age][type];
+            let text = templates[Math.floor(Math.random() * templates.length)];
+            text = text.replace(/{event}/g, event).replace(/{note}/g, note);
+            text = text.replace(/\n\n\n/g, '\n\n').trim();
+
+            currentText = text;
+            document.getElementById('textOutput').textContent = text;
+        }
+
+        function copyText() {
+            if (!currentText) return;
+            navigator.clipboard.writeText(currentText);
+            showToast('Text kopiert!');
+        }
+
+        function shareWhatsApp() {
+            if (!currentText) return;
+            window.open(`https://wa.me/?text=${encodeURIComponent(currentText)}`, '_blank');
+        }
+
+        function shareFacebook() {
+            if (!currentText) return;
+            window.open(`https://www.facebook.com/sharer/sharer.php?quote=${encodeURIComponent(currentText)}`, '_blank');
+        }
+
+        function shareEmail() {
+            if (!currentText) return;
+            window.location.href = `mailto:?subject=ASV Post&body=${encodeURIComponent(currentText)}`;
+        }
+
+        // ========== MEME GENERATOR ==========
+        const memeData = {
+            drake: {
+                emojis: ['😒', '😎'],
+                presets: [
+                    { top: 'Hausaufgaben machen', bottom: 'Mit der ASV Jugend angeln' },
+                    { top: 'Videospiele spielen', bottom: 'Echte Fische fangen' },
+                    { top: 'Im Freibad schwimmen', bottom: 'Im See angeln' }
+                ]
+            },
+            distracted: {
+                emojis: ['👀', '💔', '🎣'],
+                presets: [
+                    { top: 'Mein Bett am Samstag', bottom: 'Der Vereinssee bei Sonnenaufgang' }
+                ]
+            },
+            expanding: {
+                emojis: ['🧠', '🧠✨', '🧠💫', '🧠🌌'],
+                presets: [
+                    { top: 'Angeln können', bottom: 'Fischerprüfung bestehen' }
+                ]
+            },
+            change: {
+                emojis: ['☕'],
+                presets: [
+                    { top: 'Angeln ist', bottom: 'der beste Sport' }
+                ]
+            },
+            button: {
+                emojis: ['🔴', '🔵'],
+                presets: [
+                    { top: 'Netflix | Am See chillen', bottom: '' }
+                ]
+            },
+            success: {
+                emojis: ['✊😤'],
+                presets: [
+                    { top: 'Ersten Fisch gefangen!', bottom: '' }
+                ]
+            }
+        };
+
+        let selectedMeme = 'drake';
+
+        document.querySelectorAll('.meme-template').forEach(tpl => {
+            tpl.addEventListener('click', () => {
+                document.querySelectorAll('.meme-template').forEach(t => t.classList.remove('selected'));
+                tpl.classList.add('selected');
+                selectedMeme = tpl.dataset.meme;
+                updateMeme();
+            });
+        });
+
+        function generateRandomMeme() {
+            const presets = memeData[selectedMeme].presets;
+            const preset = presets[Math.floor(Math.random() * presets.length)];
+            document.getElementById('memeTopText').value = preset.top;
+            document.getElementById('memeBottomText').value = preset.bottom;
+            updateMeme();
+        }
+
+        function updateMeme() {
+            const canvas = document.getElementById('memeCanvas');
+            const ctx = canvas.getContext('2d');
+            const topText = document.getElementById('memeTopText').value.toUpperCase();
+            const bottomText = document.getElementById('memeBottomText').value.toUpperCase();
+            const data = memeData[selectedMeme];
+
+            // Clear canvas
+            ctx.fillStyle = '#1a2744';
+            ctx.fillRect(0, 0, 600, 600);
+
+            // Draw based on meme type
+            if (selectedMeme === 'drake') {
+                // Drake format
+                ctx.fillStyle = '#0f1c32';
+                ctx.fillRect(0, 0, 600, 300);
+                ctx.fillStyle = '#1a3a52';
+                ctx.fillRect(0, 300, 600, 300);
+
+                ctx.font = '80px sans-serif';
+                ctx.fillText('😒', 50, 180);
+                ctx.fillText('😎', 50, 480);
+
+                ctx.fillStyle = '#fff';
+                ctx.font = 'bold 28px Outfit, sans-serif';
+                wrapText(ctx, topText || 'OBEN TEXT', 180, 120, 380, 36);
+                wrapText(ctx, bottomText || 'UNTEN TEXT', 180, 420, 380, 36);
+            } else {
+                // Generic meme layout
+                const gradient = ctx.createLinearGradient(0, 0, 600, 600);
+                gradient.addColorStop(0, '#0a1628');
+                gradient.addColorStop(1, '#1a2744');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 600, 600);
+
+                ctx.font = '100px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(data.emojis[0], 300, 250);
+
+                ctx.fillStyle = '#fff';
+                ctx.font = 'bold 32px Outfit, sans-serif';
+                wrapText(ctx, topText, 300, 350, 520, 40);
+
+                ctx.font = 'bold 24px Outfit, sans-serif';
+                ctx.fillStyle = 'rgba(255,255,255,0.8)';
+                wrapText(ctx, bottomText, 300, 450, 520, 32);
+            }
+
+            // Watermark
+            ctx.font = '14px Outfit, sans-serif';
+            ctx.fillStyle = 'rgba(255,255,255,0.3)';
+            ctx.textAlign = 'right';
+            ctx.fillText('ASV Petri Heil 🎣', 580, 580);
+        }
+
+        function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+            const words = text.split(' ');
+            let line = '';
+            let testLine = '';
+            let lines = [];
+
+            for (let n = 0; n < words.length; n++) {
+                testLine = line + words[n] + ' ';
+                if (ctx.measureText(testLine).width > maxWidth && n > 0) {
+                    lines.push(line);
+                    line = words[n] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            lines.push(line);
+
+            const startY = y - ((lines.length - 1) * lineHeight) / 2;
+            lines.forEach((l, i) => {
+                ctx.fillText(l.trim(), x, startY + i * lineHeight);
+            });
+        }
+
+        function downloadMeme() {
+            const canvas = document.getElementById('memeCanvas');
+            const link = document.createElement('a');
+            link.download = 'asv-meme.png';
+            link.href = canvas.toDataURL();
+            link.click();
+            showToast('Meme heruntergeladen!');
+        }
+
+        async function copyMemeToClipboard() {
+            const canvas = document.getElementById('memeCanvas');
+            canvas.toBlob(async (blob) => {
+                await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+                showToast('Meme kopiert!');
+            });
+        }
+
+        // ========== IMAGE GENERATOR ==========
+        let selectedColor = '#00b4d8';
+
+        document.querySelectorAll('.color-option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                document.querySelectorAll('.color-option').forEach(o => o.classList.remove('selected'));
+                opt.classList.add('selected');
+                selectedColor = opt.dataset.color;
+                updateImage();
+            });
+        });
+
+        function updateImage() {
+            const canvas = document.getElementById('imageCanvas');
+            const ctx = canvas.getContext('2d');
+            const format = document.getElementById('imageFormat').value;
+            const style = document.getElementById('imageStyle').value;
+            const title = document.getElementById('imageTitle').value;
+            const subtitle = document.getElementById('imageSubtitle').value;
+            const emoji = document.getElementById('imageEmoji').value;
+
+            // Set canvas size based on format
+            const sizes = {
+                square: [540, 540],
+                story: [360, 640],
+                landscape: [600, 315]
+            };
+            [canvas.width, canvas.height] = sizes[format];
+
+            // Draw background
+            const gradients = {
+                gradient: [selectedColor, '#0077b6'],
+                nature: ['#134e5e', '#71b280'],
+                water: ['#0f2027', '#2c5364'],
+                dark: ['#0a1628', '#1a2744']
+            };
+            const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            grad.addColorStop(0, gradients[style][0]);
+            grad.addColorStop(1, gradients[style][1]);
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw emoji
+            ctx.font = `${canvas.width * 0.2}px sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.fillText(emoji, canvas.width / 2, canvas.height * 0.4);
+
+            // Draw title
+            ctx.fillStyle = '#fff';
+            ctx.font = `bold ${canvas.width * 0.08}px Outfit, sans-serif`;
+            ctx.fillText(title, canvas.width / 2, canvas.height * 0.6);
+
+            // Draw subtitle
+            ctx.font = `${canvas.width * 0.05}px Outfit, sans-serif`;
+            ctx.fillStyle = 'rgba(255,255,255,0.8)';
+            ctx.fillText(subtitle, canvas.width / 2, canvas.height * 0.7);
+
+            // Watermark
+            ctx.font = '12px Outfit, sans-serif';
+            ctx.fillStyle = 'rgba(255,255,255,0.3)';
+            ctx.textAlign = 'right';
+            ctx.fillText('ASV Petri Heil', canvas.width - 10, canvas.height - 10);
+        }
+
+        function downloadImage() {
+            const canvas = document.getElementById('imageCanvas');
+            const link = document.createElement('a');
+            link.download = 'asv-social-post.png';
+            link.href = canvas.toDataURL();
+            link.click();
+            showToast('Bild heruntergeladen!');
+        }
+
+        async function copyImageToClipboard() {
+            const canvas = document.getElementById('imageCanvas');
+            canvas.toBlob(async (blob) => {
+                await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+                showToast('Bild kopiert!');
+            });
+        }
+
+        // ========== VIDEO/STORY GENERATOR ==========
+        let storyPlaying = false;
+
+        function prepareVideo() {
+            const title1 = document.getElementById('videoTitle1').value;
+            const title2 = document.getElementById('videoTitle2').value;
+            const title3 = document.getElementById('videoTitle3').value;
+            const bg = document.getElementById('videoBg').value;
+
+            document.getElementById('slideText0').textContent = title1;
+            document.getElementById('slideText1').textContent = title2;
+            document.getElementById('slideText2').textContent = title3;
+
+            const colors = {
+                blue: 'linear-gradient(135deg, #0a1628, #1a4a6e)',
+                green: 'linear-gradient(135deg, #0a2818, #1a6e4a)',
+                purple: 'linear-gradient(135deg, #1a0a28, #4a1a6e)',
+                orange: 'linear-gradient(135deg, #281a0a, #6e4a1a)'
+            };
+            document.getElementById('videoPreview').style.background = colors[bg];
+        }
+
+        function playStory() {
+            if (storyPlaying) return;
+            storyPlaying = true;
+
+            const slides = document.querySelectorAll('.story-slide');
+            let current = 0;
+
+            slides.forEach(s => s.classList.remove('active'));
+            slides[0].classList.add('active');
+
+            const interval = setInterval(() => {
+                slides[current].classList.remove('active');
+                current++;
+                if (current >= slides.length) {
+                    clearInterval(interval);
+                    storyPlaying = false;
+                    slides[0].classList.add('active');
+                } else {
+                    slides[current].classList.add('active');
+                }
+            }, 2000);
+        }
+
+        function exportStoryFrames() {
+            showToast('Frames werden vorbereitet...');
+            // In production: use html2canvas to capture each slide
+            setTimeout(() => showToast('Funktion bald verfügbar!'), 1000);
+        }
+
+        function exportStoryAsGif() {
+            showToast('GIF wird erstellt...');
+            // In production: use gif.js to create animated GIF
+            setTimeout(() => showToast('Funktion bald verfügbar!'), 1000);
+        }
+
+        // ========== UTILITIES ==========
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = '✓ ' + message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        // Initialize
+        updateMeme();
+        updateImage();
+        prepareVideo();
+    </script>
+</body>
+
+</html>

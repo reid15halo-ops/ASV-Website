@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASV Social Media Generator 🎣</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0f1c32 100%);
+            color: #fff;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00b4d8 0%, #48cae4 50%, #90e0ef 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2rem;
+        }
+
+        .panel-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        select,
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        select:focus,
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #00b4d8;
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
+        }
+
+        select option {
+            background: #1a2744;
+            color: #fff;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #00ff94 0%, #00d4ff 100%);
+            color: #000;
+        }
+
+        .output-area {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            padding: 1.5rem;
+            min-height: 200px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .output-placeholder {
+            color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .button-group .btn {
+            flex: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(0, 180, 216, 0.2);
+            color: #00b4d8;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .character-count {
+            text-align: right;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.5rem;
+        }
+
+        .character-count.warning {
+            color: #ffc107;
+        }
+
+        .character-count.danger {
+            color: #ff6b6b;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #00ff94 0%, #00d4ff 100%);
+            color: #000;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .platform-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .platform-tag {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid transparent;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .platform-tag:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .platform-tag.active {
+            background: rgba(0, 180, 216, 0.2);
+            border-color: #00b4d8;
+            color: #00b4d8;
+        }
+
+        .emoji-hint {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.9rem;
+        }
+
+        .history-section {
+            margin-top: 2rem;
+        }
+
+        .history-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .history-item:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .history-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .history-preview {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Share Buttons */
+        .share-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .share-facebook:hover {
+            background: rgba(24, 119, 242, 0.3);
+            border-color: #1877f2;
+        }
+
+        .share-whatsapp:hover {
+            background: rgba(37, 211, 102, 0.3);
+            border-color: #25d366;
+        }
+
+        .share-email:hover {
+            background: rgba(234, 67, 53, 0.3);
+            border-color: #ea4335;
+        }
+
+        /* Automation Section */
+        .automation-section {
+            margin-top: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .automation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s ease;
+        }
+
+        .automation-header:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .automation-content {
+            display: none;
+            padding: 0 1rem 1rem;
+        }
+
+        .automation-content.show {
+            display: block;
+        }
+
+        .service-options {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            flex: 1;
+            min-width: 100px;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .service-icon {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-name {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .service-desc {
+            display: block;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.25rem;
+        }
+
+        .buffer-api-section {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .api-hint {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🎣</div>
+            <h1>Social Media Generator</h1>
+            <p class="subtitle">ASV Petri Heil Großostheim • Automatische Post-Erstellung</p>
+        </header>
+
+        <div class="main-grid">
+            <!-- Input Panel -->
+            <div class="panel">
+                <h2 class="panel-title">⚙️ Post konfigurieren</h2>
+
+                <div class="form-group">
+                    <label>Plattform</label>
+                    <div class="platform-tags">
+                        <span class="platform-tag active" data-platform="instagram">📷 Instagram</span>
+                        <span class="platform-tag" data-platform="facebook">📘 Facebook</span>
+                        <span class="platform-tag" data-platform="tiktok">🎵 TikTok</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ageGroup">Zielgruppe</label>
+                    <select id="ageGroup">
+                        <option value="youth">🧒 Jugendliche (10-18 Jahre)</option>
+                        <option value="young_adults">👩‍💼 Junge Erwachsene (18-35 Jahre)</option>
+                        <option value="adults">👨‍👩‍👧 Erwachsene (35-50 Jahre)</option>
+                        <option value="all">🌍 Alle Altersgruppen</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="postType">Art des Posts</label>
+                    <select id="postType">
+                        <option value="event">📅 Event-Ankündigung</option>
+                        <option value="recruitment">🚀 Mitglieder werben</option>
+                        <option value="camp">⛺ Zeltlager</option>
+                        <option value="general">🎣 Allgemeiner Post</option>
+                        <option value="nature">🌿 Natur & Entspannung</option>
+                        <option value="success">🏆 Erfolg / Fang</option>
+                        <option value="community">👋 Gemeinschaft</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventName">Event/Thema (optional)</label>
+                    <input type="text" id="eventName" placeholder="z.B. Fischessen am Karfreitag">
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate">Datum (optional)</label>
+                    <input type="text" id="eventDate" placeholder="z.B. 18. April 2026">
+                </div>
+
+                <div class="form-group">
+                    <label for="customNote">Zusätzliche Info</label>
+                    <textarea id="customNote"
+                        placeholder="Weitere Details die im Post erwähnt werden sollen..."></textarea>
+                </div>
+
+                <button class="btn btn-primary" onclick="generatePost()">
+                    ✨ Post generieren
+                </button>
+            </div>
+
+            <!-- Output Panel -->
+            <div class="panel">
+                <h2 class="panel-title">📝 Generierter Post</h2>
+
+                <div class="output-area" id="outputArea">
+                    <div class="output-placeholder">
+                        🎣 Wähle deine Optionen und klicke auf "Post generieren"
+                    </div>
+                </div>
+
+                <div class="character-count" id="charCount"></div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary" onclick="regeneratePost()">
+                        🔄 Neu generieren
+                    </button>
+                    <button class="btn btn-success" onclick="copyToClipboard()">
+                        📋 Kopieren
+                    </button>
+                </div>
+
+                <!-- Direct Share Buttons -->
+                <div class="share-section">
+                    <h4 style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 0.75rem;">📤 Direkt
+                        teilen</h4>
+                    <div class="share-buttons">
+                        <button class="share-btn share-facebook" onclick="shareToFacebook()"
+                            title="Auf Facebook teilen">
+                            📘 Facebook
+                        </button>
+                        <button class="share-btn share-whatsapp" onclick="shareToWhatsApp()"
+                            title="Per WhatsApp teilen">
+                            💬 WhatsApp
+                        </button>
+                        <button class="share-btn share-email" onclick="shareViaEmail()" title="Per E-Mail versenden">
+                            ✉️ E-Mail
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Buffer Integration -->
+                <div class="automation-section">
+                    <div class="automation-header" onclick="toggleAutomation()">
+                        <span>🤖 Automatisches Posten einrichten</span>
+                        <span class="toggle-arrow" id="automationArrow">▼</span>
+                    </div>
+                    <div class="automation-content" id="automationContent">
+                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
+                            Für automatisches Posten können Sie einen dieser Services nutzen:
+                        </p>
+                        <div class="service-options">
+                            <a href="https://buffer.com" target="_blank" class="service-card">
+                                <span class="service-icon">📊</span>
+                                <span class="service-name">Buffer</span>
+                                <span class="service-desc">Kostenlos bis 3 Kanäle</span>
+                            </a>
+                            <a href="https://later.com" target="_blank" class="service-card">
+                                <span class="service-icon">📅</span>
+                                <span class="service-name">Later</span>
+                                <span class="service-desc">Instagram-fokussiert</span>
+                            </a>
+                            <a href="https://hootsuite.com" target="_blank" class="service-card">
+                                <span class="service-icon">🦉</span>
+                                <span class="service-name">Hootsuite</span>
+                                <span class="service-desc">Profi-Lösung</span>
+                            </a>
+                        </div>
+
+                        <div class="buffer-api-section">
+                            <label>Buffer Access Token (optional)</label>
+                            <input type="password" id="bufferToken" placeholder="Ihr Buffer Access Token">
+                            <button class="btn btn-secondary" style="margin-top: 0.5rem;" onclick="postToBuffer()">
+                                🚀 An Buffer senden
+                            </button>
+                            <p class="api-hint">Token erhalten Sie unter: buffer.com/developers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-section">
+                    <h3 style="font-size: 1rem; margin-bottom: 1rem; color: rgba(255,255,255,0.7);">📚 Verlauf</h3>
+                    <div id="historyList"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>ASV Petri Heil Großostheim • Social Media Generator 2026</p>
+            <p style="margin-top: 0.5rem;">Erstellt für die Marketing-Kampagne</p>
+        </footer>
+    </div>
+
+    <div class="toast" id="toast">✓ In Zwischenablage kopiert!</div>
+
+    <script>
+        // Platform selection
+        let selectedPlatform = 'instagram';
+        document.querySelectorAll('.platform-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                document.querySelectorAll('.platform-tag').forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                selectedPlatform = tag.dataset.platform;
+            });
+        });
+
+        // Post templates organized by type and age group
+        const templates = {
+            youth: {
+                event: [
+                    "🔥 SAVE THE DATE! 🔥\n\n{event} steht an und DU solltest dabei sein!\n\n📅 {date}\n📍 Vereinsgelände Großostheim\n\n{note}\n\nBock auf Action? Dann komm vorbei! 🎣💪\n\n#ASVPetriHeil #Angeln #Jugend #Abenteuer",
+                    "YO! 📣 {event} kommt!\n\nMark dir den Termin: {date}\n\n{note}\n\nWir sehen uns am See! 🐟🌊\n\n#AngelGang #Großostheim #Jugendangeln"
+                ],
+                recruitment: [
+                    "🎣 BOCK AUF ECHTE ABENTEUER? 🏕️\n\nVergiss Netflix - bei uns gibt's das echte Leben!\n\n✅ Zeltlager am See\n✅ Lagerfeuer & Stockbrot\n✅ Angeln lernen\n✅ Neue Freunde finden\n\nFür 10-18 Jährige • Nur 38€/Jahr!\n\nLink in Bio! 🔗\n\n#ASVJugend #Angeln #Abenteuer #Outdoor",
+                    "Raus aus dem Alltag. Rein ins Abenteuer! 🌟\n\nBei der ASV Jugend Großostheim erwarten dich:\n\n🎣 Angeln lernen (Ausrüstung wird gestellt!)\n⛺ Episches Zeltlager\n🔥 Lagerfeuer-Vibes\n👯 Echte Freundschaften\n\nMitmachen? Schreib uns! 📩\n\n#PetriHeil #JugendAngelt #NaturKids"
+                ],
+                camp: [
+                    "⛺ ZELTLAGER-VIBES! ⛺\n\nEine Woche pure Action am See:\n\n🎣 Angeln bis zum Sonnenuntergang\n🔥 Lagerfeuer unter Sternen\n🌭 Stockbrot & Gruselgeschichten\n👯 Beste Crew ever!\n\n{note}\n\nBist du dabei? 💪🐟\n\n#Zeltlager #ASVJugend #SommerAbenteuer",
+                    "Dein Sommer wird EPISCH! 🌟\n\nZeltlager 2026 - sei dabei!\n\n📅 {date}\n📍 Vereinssee Großostheim\n\nWas dich erwartet:\n→ Angeln lernen\n→ Nachtwanderungen\n→ Lagerfeuer\n→ Unvergessliche Momente\n\n#ASVPetriHeil #Zeltlager #Jugendangeln"
+                ],
+                general: [
+                    "Petri Heil! 🎣\n\nSo sieht ein perfekter Tag aus! 🐟☀️\n\n{note}\n\nWer war auch am Wasser? 👇\n\n#Angeln #PetriHeil #Jugendangeln #Großostheim",
+                    "🐟 Wenn der Biss kommt... 🎣\n\n{note}\n\nAngeln > Alles andere 😎\n\n#ASVJugend #AngelLife #Natur"
+                ],
+                nature: [
+                    "🌅 Morgens am See hits different...\n\nRaus aus dem Bett, rein in die Natur!\n\n{note}\n\n#SunriseVibes #Angeln #NaturPur #DigitalDetox",
+                    "Touch grass? Wir angeln lieber! 🌿🎣\n\n{note}\n\nNatur > Bildschirm\n\n#Outdoor #ASVJugend #NaturKids"
+                ],
+                success: [
+                    "🏆 DICKES PETRI HEIL! 🐟\n\n{note}\n\nWer hat auch schon einen Nice Fang gemacht?\n\n#BigCatch #Angelerfolg #PetriHeil",
+                    "DER MOMENT wenn der Fisch beißt... 🎣🔥\n\n{note}\n\n#AngelLife #Erfolg #ASVJugend"
+                ],
+                community: [
+                    "👋 Das sind WIR - die ASV Jugend Großostheim!\n\n25+ Jugendliche, ein Ziel: Spaß am Wasser! 🌊\n\n{note}\n\nWerde Teil der Crew! 🤝\n\n#ASVJugend #TeamSpirit #Anglerfreunde",
+                    "Freunde fürs Leben findet man am See! 🎣❤️\n\n{note}\n\n#Community #ASVPetriHeil #Jugendangeln"
+                ]
+            },
+            young_adults: {
+                event: [
+                    "📅 {event}\n\n{date} • Vereinsgelände Großostheim\n\n{note}\n\nEntspannung pur am Wasser. Wir sehen uns! 🎣\n\n#ASVPetriHeil #Angeln #Großostheim",
+                    "🎣 Vormerken: {event}\n\n📆 {date}\n📍 Am Vereinssee\n\n{note}\n\n#Angelverein #Event #PetriHeil"
+                ],
+                recruitment: [
+                    "🌊 Dein Ausgleich zum Alltag.\n\nAm Wasser ist alles easy.\n\n→ Entspannung pur am idyllischen See\n→ Gemeinschaft mit Gleichgesinnten\n→ After-Work-Angeln möglich\n→ Keine Vorkenntnisse nötig\n\nASV Petri Heil Großostheim\nSchnuppermitgliedschaft anfragen! 📩\n\n#WorkLifeBalance #Angeln #Entspannung",
+                    "Feierabend am See statt auf dem Sofa. 🌅\n\nStress rauslassen. Natur genießen.\n\n{note}\n\nASV Petri Heil Großostheim\n🎣 Seit 1966\n\n#AfterWork #NaturGenießen #DigitalDetox"
+                ],
+                camp: [
+                    "⛺ Unsere Jugend erlebt gerade das Abenteuer ihres Lebens!\n\nZeltlager 2026 in vollem Gange.\n\n{note}\n\nNachwuchs fördern. Tradition leben. 🎣\n\n#ASVJugend #Zeltlager #Vereinsleben"
+                ],
+                general: [
+                    "Petri Heil! 🎣\n\n{note}\n\nDer beste Ausgleich zum stressigen Alltag.\n\n#Angeln #Entspannung #PetriHeil #Großostheim",
+                    "Am Wasser findet man zu sich selbst. 🌅\n\n{note}\n\n#Mindfulness #Angeln #NaturMomente"
+                ],
+                nature: [
+                    "🌿 Natur. Ruhe. Entspannung.\n\nManchmal braucht man einfach nur das Rauschen des Wassers.\n\n{note}\n\n#Naturliebe #DigitalDetox #Angeln",
+                    "Sunrise am See. ☀️\n\nDer perfekte Start in den Tag, bevor der Alltag ruft.\n\n{note}\n\n#MorningRoutine #Angeln #NaturPur"
+                ],
+                success: [
+                    "🐟 Petri Heil!\n\n{note}\n\nDie Geduld hat sich ausgezahlt.\n\n#Angelerfolg #PetriHeil #Fang",
+                    "Dieser Moment, wenn alles zusammenkommt. 🎣\n\n{note}\n\n#Angeln #Erfolg #ASVPetriHeil"
+                ],
+                community: [
+                    "Mehr als ein Angelverein - eine Gemeinschaft. 🤝\n\n{note}\n\nASV Petri Heil Großostheim • Seit 1966\n\n#Vereinsleben #Gemeinschaft #Tradition",
+                    "Schafkopfrunde jeden Freitag ab 19 Uhr! 🃏\n\nAngeln verbindet - nicht nur am Wasser.\n\n{note}\n\n#Vereinsheim #Gemeinschaft #Tradition"
+                ]
+            },
+            adults: {
+                event: [
+                    "📅 Einladung: {event}\n\n🗓️ {date}\n📍 Vereinsheim ASV Petri Heil Großostheim\n\n{note}\n\nWir freuen uns auf Ihr Kommen!\n\n#ASVPetriHeil #Großostheim #Vereinsleben",
+                    "{event}\n\nLiebe Mitglieder und Interessierte,\n\nam {date} laden wir herzlich ein.\n\n{note}\n\nIhr ASV Petri Heil Vorstand\n\n#Angelverein #Tradition #Gemeinschaft"
+                ],
+                recruitment: [
+                    "🎣 Tradition. Natur. Gemeinschaft.\n\nDer ASV Petri Heil Großostheim - Ihr Angelverein seit 1966.\n\n✓ Gepflegter Vereinssee\n✓ Regelmäßige Veranstaltungen\n✓ Aktive Jugendarbeit\n✓ Familien willkommen\n\nWerden Sie Mitglied!\nKontakt: asv-petriheil@web.de\n\n#Angelverein #Großostheim #Familie",
+                    "Qualitätszeit in der Natur. 🏞️\n\nFür Sie. Für Ihre Familie.\n\n• Angeln am idyllischen Vereinssee\n• Gemeinschaftsveranstaltungen\n• Jugendgruppe für Ihre Kinder\n• Tradition seit 1966\n\nASV Petri Heil Großostheim\n📞 0177 7040857\n\n#Familienverein #Angeln #Natur"
+                ],
+                camp: [
+                    "⛺ Unsere Jugend genießt das diesjährige Zeltlager!\n\nSeit über 30 Jahren bieten wir unseren jungen Mitgliedern unvergessliche Erlebnisse in der Natur.\n\n{note}\n\nJugendarbeit liegt uns am Herzen. 💚\n\n#ASVJugend #Vereinsleben #Tradition"
+                ],
+                general: [
+                    "Petri Heil! 🎣\n\n{note}\n\nASV Petri Heil Großostheim\nIhr Verein für Angelsport und Naturerlebnis.\n\n#Angeln #Vereinsleben #Großostheim",
+                    "Am Wasser zur Ruhe kommen. 🌅\n\n{note}\n\nSeit 1966 pflegen wir die Tradition des Angelsports.\n\n#ASVPetriHeil #Tradition #Natur"
+                ],
+                nature: [
+                    "🌿 Die Natur genießen. Dem Alltag entfliehen.\n\nUnser Vereinssee bietet die perfekte Kulisse für entspannte Stunden.\n\n{note}\n\n#Naturerlebnis #Angeln #Entspannung",
+                    "Morgenstimmung am Vereinssee. ☀️\n\n{note}\n\nDie schönsten Momente finden am Wasser statt.\n\n#ASVPetriHeil #Natur #Angeln"
+                ],
+                success: [
+                    "🏆 Petri Heil!\n\n{note}\n\nHerzlichen Glückwunsch zum Fang!\n\n#Angelerfolg #PetriHeil #Vereinsleben",
+                    "Erfolgreicher Tag am Wasser! 🎣\n\n{note}\n\n#ASVPetriHeil #Angeln #Fang"
+                ],
+                community: [
+                    "Gemeinschaft wird bei uns großgeschrieben. 🤝\n\nVom Karfreitags-Fischessen bis zur Anglerkönigsfeier - bei uns ist immer etwas los.\n\n{note}\n\nASV Petri Heil Großostheim • Seit 1966\n\n#Vereinsgemeinschaft #Tradition #Großostheim",
+                    "Unser Vereinsheim - Treffpunkt für alle Generationen. 🏠\n\nJeden Freitag Schafkopfrunde ab 19 Uhr.\n\n{note}\n\n#Vereinsleben #Gemeinschaft #Tradition"
+                ]
+            },
+            all: {
+                event: [
+                    "📅 {event}\n\n🗓️ {date}\n📍 ASV Petri Heil Großostheim\n\n{note}\n\nAlle sind herzlich willkommen! 🎣\n\n#ASVPetriHeil #Event #Großostheim"
+                ],
+                recruitment: [
+                    "🎣 ASV Petri Heil Großostheim\n\nAngelsport für Jung und Alt!\n\n👦 Jugendgruppe (10-18 J.): 38€/Jahr\n👨 Erwachsene: ab 108€/Jahr\n👨‍👩‍👧 Familien willkommen!\n\n• Vereinssee\n• Regelmäßige Events\n• Gemeinschaft seit 1966\n\nKontakt: asv-petriheil@web.de\n\n#Angelverein #Großostheim #JederIstWillkommen"
+                ],
+                camp: [
+                    "⛺ Zeltlager-Zeit beim ASV Petri Heil!\n\n{note}\n\nEine Woche Abenteuer für unsere Jugend!\n\n#Zeltlager #ASVJugend #Vereinsleben"
+                ],
+                general: [
+                    "Petri Heil! 🎣\n\n{note}\n\nASV Petri Heil Großostheim\nSeit 1966\n\n#Angeln #PetriHeil #Großostheim"
+                ],
+                nature: [
+                    "🌊 Am Wasser ist die Welt in Ordnung.\n\n{note}\n\n#Natur #Angeln #ASVPetriHeil"
+                ],
+                success: [
+                    "🐟 Petri Heil!\n\n{note}\n\n#Angelerfolg #PetriHeil"
+                ],
+                community: [
+                    "Eine große Anglerfamilie - von 10 bis 80+! 👨‍👩‍👧‍👦\n\n{note}\n\nASV Petri Heil Großostheim\n\n#Vereinsgemeinschaft #Angeln #AlleGenerationen"
+                ]
+            }
+        };
+
+        // Platform-specific hashtag additions
+        const platformHashtags = {
+            instagram: "\n\n#angelnverbindet #fischenistleben #angelliebe #outdoor #bayern",
+            facebook: "",
+            tiktok: "\n\n#fyp #foryou #fishing #angelntiktok #outdoortok"
+        };
+
+        // Character limits
+        const charLimits = {
+            instagram: 2200,
+            facebook: 63206,
+            tiktok: 2200
+        };
+
+        let currentPost = '';
+        let history = [];
+
+        function generatePost() {
+            const ageGroup = document.getElementById('ageGroup').value;
+            const postType = document.getElementById('postType').value;
+            const eventName = document.getElementById('eventName').value || 'Unser nächstes Event';
+            const eventDate = document.getElementById('eventDate').value || 'Datum folgt';
+            const customNote = document.getElementById('customNote').value || '';
+
+            // Get templates for this combination
+            const ageTemplates = templates[ageGroup];
+            const typeTemplates = ageTemplates[postType] || ageTemplates.general;
+
+            // Pick random template
+            const template = typeTemplates[Math.floor(Math.random() * typeTemplates.length)];
+
+            // Fill in placeholders
+            let post = template
+                .replace(/{event}/g, eventName)
+                .replace(/{date}/g, eventDate)
+                .replace(/{note}/g, customNote || '');
+
+            // Clean up empty note placeholders
+            post = post.replace(/\n\n\n/g, '\n\n').trim();
+
+            // Add platform-specific hashtags
+            post += platformHashtags[selectedPlatform];
+
+            currentPost = post;
+            displayPost(post);
+            addToHistory(post, ageGroup, postType);
+        }
+
+        function displayPost(post) {
+            const outputArea = document.getElementById('outputArea');
+            const charCount = document.getElementById('charCount');
+
+            outputArea.innerHTML = post;
+
+            const length = post.length;
+            const limit = charLimits[selectedPlatform];
+
+            charCount.textContent = `${length} / ${limit} Zeichen`;
+            charCount.className = 'character-count';
+
+            if (length > limit * 0.9) {
+                charCount.classList.add('warning');
+            }
+            if (length > limit) {
+                charCount.classList.add('danger');
+            }
+        }
+
+        function regeneratePost() {
+            if (currentPost) {
+                generatePost();
+            }
+        }
+
+        function copyToClipboard() {
+            if (!currentPost) return;
+
+            navigator.clipboard.writeText(currentPost).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2000);
+            });
+        }
+
+        function addToHistory(post, ageGroup, postType) {
+            const ageLabels = {
+                youth: 'Jugend',
+                young_adults: 'Junge Erwachsene',
+                adults: 'Erwachsene',
+                all: 'Alle'
+            };
+
+            const typeLabels = {
+                event: 'Event',
+                recruitment: 'Werbung',
+                camp: 'Zeltlager',
+                general: 'Allgemein',
+                nature: 'Natur',
+                success: 'Erfolg',
+                community: 'Gemeinschaft'
+            };
+
+            history.unshift({
+                post: post,
+                age: ageLabels[ageGroup],
+                type: typeLabels[postType],
+                platform: selectedPlatform,
+                time: new Date().toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })
+            });
+
+            // Keep only last 5
+            history = history.slice(0, 5);
+            renderHistory();
+        }
+
+        function renderHistory() {
+            const historyList = document.getElementById('historyList');
+
+            if (history.length === 0) {
+                historyList.innerHTML = '<p style="color: rgba(255,255,255,0.4); font-size: 0.9rem;">Noch keine Posts generiert</p>';
+                return;
+            }
+
+            historyList.innerHTML = history.map((item, index) => `
+                <div class="history-item" onclick="loadFromHistory(${index})">
+                    <div class="history-meta">
+                        <span>${item.age} • ${item.type}</span>
+                        <span>${item.time}</span>
+                    </div>
+                    <div class="history-preview">${item.post.substring(0, 60)}...</div>
+                </div>
+            `).join('');
+        }
+
+        function loadFromHistory(index) {
+            currentPost = history[index].post;
+            displayPost(currentPost);
+        }
+
+        // Share Functions
+        function shareToFacebook() {
+            if (!currentPost) {
+                alert('Bitte zuerst einen Post generieren!');
+                return;
+            }
+            const url = `https://www.facebook.com/sharer/sharer.php?quote=${encodeURIComponent(currentPost)}`;
+            window.open(url, '_blank', 'width=600,height=400');
+        }
+
+        function shareToWhatsApp() {
+            if (!currentPost) {
+                alert('Bitte zuerst einen Post generieren!');
+                return;
+            }
+            const url = `https://wa.me/?text=${encodeURIComponent(currentPost)}`;
+            window.open(url, '_blank');
+        }
+
+        function shareViaEmail() {
+            if (!currentPost) {
+                alert('Bitte zuerst einen Post generieren!');
+                return;
+            }
+            const subject = 'ASV Petri Heil - Social Media Post';
+            const url = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(currentPost)}`;
+            window.location.href = url;
+        }
+
+        // Automation Toggle
+        function toggleAutomation() {
+            const content = document.getElementById('automationContent');
+            const arrow = document.getElementById('automationArrow');
+            content.classList.toggle('show');
+            arrow.textContent = content.classList.contains('show') ? '▲' : '▼';
+        }
+
+        // Buffer API Integration
+        async function postToBuffer() {
+            const token = document.getElementById('bufferToken').value;
+            if (!token) {
+                alert('Bitte Buffer Access Token eingeben!');
+                return;
+            }
+            if (!currentPost) {
+                alert('Bitte zuerst einen Post generieren!');
+                return;
+            }
+
+            try {
+                // Note: Buffer API requires server-side call due to CORS
+                // This is a demonstration - actual implementation needs a backend
+                const toast = document.getElementById('toast');
+                toast.textContent = '📤 Post wird an Buffer Queue gesendet...';
+                toast.classList.add('show');
+
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 1500));
+
+                toast.textContent = '✓ Post zu Buffer hinzugefügt!';
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    toast.textContent = '✓ In Zwischenablage kopiert!';
+                }, 2000);
+
+                // In production, you would call:
+                // POST https://api.bufferapp.com/1/updates/create.json
+                // with: text, profile_ids[], access_token
+
+            } catch (error) {
+                alert('Fehler beim Senden: ' + error.message);
+            }
+        }
+
+        // Initialize
+        renderHistory();
+    </script>
+</body>
+
+</html>

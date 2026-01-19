@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASV Marketing Platform 🎣</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="platform-styles.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <span>🎣</span>
+            <span>ASV Marketing</span>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="nav-btn active" data-view="dashboard">📊 Dashboard</button>
+            <button class="nav-btn" data-view="calendar">📅 Kalender</button>
+            <button class="nav-btn" data-view="content">✨ Content</button>
+            <button class="nav-btn" data-view="media">🖼️ Medien</button>
+            <button class="nav-btn" data-view="accounts">👤 Accounts</button>
+            <button class="nav-btn" data-view="recap">🏆 Jahresrückblick</button>
+        </nav>
+        <div class="sidebar-accounts">
+            <h4>Aktive Accounts</h4>
+            <div id="accountList"></div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <!-- DASHBOARD -->
+        <section id="dashboard-view" class="view active">
+            <h1>📊 Dashboard</h1>
+            <div class="stats-grid">
+                <div class="stat-card"><span class="stat-num" id="statEvents">0</span><span
+                        class="stat-label">Anstehende Events</span></div>
+                <div class="stat-card"><span class="stat-num" id="statMedia">0</span><span class="stat-label">Medien
+                        hochgeladen</span></div>
+                <div class="stat-card"><span class="stat-num" id="statPosts">0</span><span class="stat-label">Posts
+                        erstellt</span></div>
+            </div>
+            <div class="dashboard-grid">
+                <div class="panel">
+                    <h3>📅 Nächste Events</h3>
+                    <div id="upcomingEvents">Wird geladen...</div>
+                </div>
+                <div class="panel">
+                    <h3>🚀 Schnellaktionen</h3>
+                    <button class="action-btn" onclick="switchView('content')">✨ Neuen Post erstellen</button>
+                    <button class="action-btn" onclick="switchView('media')">🖼️ Medien hochladen</button>
+                    <button class="action-btn" onclick="switchView('calendar')">📅 Events anzeigen</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALENDAR -->
+        <section id="calendar-view" class="view">
+            <h1>📅 Kalender & Events</h1>
+            <div class="panel">
+                <p>Events werden vom ASV Google Kalender geladen:</p>
+                <div id="calendarEvents">Wird geladen...</div>
+                <button class="btn-primary" onclick="loadCalendarEvents()">🔄 Aktualisieren</button>
+            </div>
+            <div class="panel">
+                <h3>📝 Post aus Event generieren</h3>
+                <select id="eventSelect">
+                    <option>Event auswählen...</option>
+                </select>
+                <select id="eventPlatform">
+                    <option value="instagram">📷 Instagram</option>
+                    <option value="tiktok">🎵 TikTok</option>
+                </select>
+                <button class="btn-primary" onclick="generateEventPost()">✨ Post generieren</button>
+                <div id="eventPostOutput" class="output-box"></div>
+            </div>
+        </section>
+
+        <!-- CONTENT GENERATOR -->
+        <section id="content-view" class="view">
+            <h1>✨ Content erstellen</h1>
+            <div class="content-grid">
+                <div class="panel">
+                    <h3>Einstellungen</h3>
+                    <label>Account</label>
+                    <select id="contentAccount"></select>
+                    <label>Typ</label>
+                    <select id="contentType">
+                        <option value="post">📷 Bild-Post</option>
+                        <option value="story">📱 Story</option>
+                        <option value="reel">🎬 Reel/TikTok</option>
+                    </select>
+                    <label>Zielgruppe</label>
+                    <select id="contentAudience">
+                        <option value="youth">🧒 Jugend (10-18)</option>
+                        <option value="adults">👨‍👩‍👧 Erwachsene (18+)</option>
+                    </select>
+                    <label>Text</label>
+                    <textarea id="contentText" rows="4" placeholder="Post-Text..."></textarea>
+                    <button class="btn-primary" onclick="generateContent()">✨ Generieren</button>
+                </div>
+                <div class="panel">
+                    <h3>Vorschau</h3>
+                    <div id="contentPreview" class="preview-box">Wähle Optionen und klicke Generieren</div>
+                    <div class="btn-group">
+                        <button class="btn-secondary" onclick="copyContent()">📋 Kopieren</button>
+                        <button class="btn-success" onclick="downloadContent()">💾 Download</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEDIA LIBRARY -->
+        <section id="media-view" class="view">
+            <h1>🖼️ Medien-Bibliothek</h1>
+            <div class="panel">
+                <div class="upload-zone" id="uploadZone">
+                    <span>📁 Bilder & Videos hierher ziehen oder klicken</span>
+                    <input type="file" id="fileInput" multiple accept="image/*,video/*" hidden>
+                </div>
+            </div>
+            <div class="media-grid" id="mediaGrid"></div>
+            <div id="mediaEditor" class="panel" style="display:none;">
+                <h3>🎨 Bild bearbeiten</h3>
+                <div class="editor-container">
+                    <canvas id="editCanvas"></canvas>
+                    <div class="filter-controls">
+                        <label>Helligkeit <input type="range" id="filterBrightness" min="50" max="150"
+                                value="100"></label>
+                        <label>Kontrast <input type="range" id="filterContrast" min="50" max="150" value="100"></label>
+                        <label>Sättigung <input type="range" id="filterSaturation" min="0" max="200"
+                                value="100"></label>
+                        <label>Wärme <input type="range" id="filterWarmth" min="0" max="50" value="0"></label>
+                        <label>Vignette <input type="range" id="filterVignette" min="0" max="100" value="0"></label>
+                    </div>
+                    <div class="preset-filters">
+                        <button onclick="applyPreset('vibrant')">🌈 Lebendig</button>
+                        <button onclick="applyPreset('warm')">☀️ Warm</button>
+                        <button onclick="applyPreset('cool')">❄️ Kühl</button>
+                        <button onclick="applyPreset('dramatic')">🎭 Dramatisch</button>
+                    </div>
+                    <div class="overlay-options">
+                        <label>Text-Overlay</label>
+                        <input type="text" id="overlayText" placeholder="ASV Petri Heil">
+                        <button onclick="addTextOverlay()">+ Text hinzufügen</button>
+                    </div>
+                    <button class="btn-success" onclick="saveEditedImage()">💾 Speichern</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCOUNTS -->
+        <section id="accounts-view" class="view">
+            <h1>👤 Social Media Accounts</h1>
+            <div class="panel">
+                <h3>Account hinzufügen</h3>
+                <input type="text" id="newAccountName" placeholder="Account-Name (z.B. ASV Jugend)">
+                <select id="newAccountPlatform">
+                    <option value="instagram">📷 Instagram</option>
+                    <option value="tiktok">🎵 TikTok</option>
+                </select>
+                <input type="text" id="newAccountHandle" placeholder="@benutzername">
+                <button class="btn-primary" onclick="addAccount()">+ Account hinzufügen</button>
+            </div>
+            <div class="panel">
+                <h3>Gespeicherte Accounts</h3>
+                <div id="accountsGrid"></div>
+            </div>
+        </section>
+
+        <!-- YEAR RECAP -->
+        <section id="recap-view" class="view">
+            <h1>🏆 Jahresrückblick 2026</h1>
+            <div class="panel">
+                <h3>Automatischer Recap</h3>
+                <p>Generiere einen Rückblick basierend auf allen Events und Medien des Jahres.</p>
+                <button class="btn-primary" onclick="generateYearRecap()">🎬 Jahresrückblick erstellen</button>
+            </div>
+            <div id="recapOutput" class="panel" style="display:none;">
+                <h3>📊 Jahres-Statistiken</h3>
+                <div id="recapStats"></div>
+                <h3>🖼️ Highlight-Collage</h3>
+                <canvas id="recapCanvas" width="1080" height="1080"></canvas>
+                <h3>📝 Social Media Texte</h3>
+                <div id="recapTexts"></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast" id="toast"></div>
+    <script src="platform-app.js"></script>
+</body>
+
+</html>
